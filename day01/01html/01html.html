@@ -1,0 +1,38 @@
+<!--声明一个标准模式的HTML5文档 不写 混杂（向后兼容）模式HTML文档-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--    charset="UTF-8"文档编码形式  对应的是文件保存的编码形式也是UTF8-->
+<!--    charset="gb2312" 对应的文件保存的编码形式为ANSI编码-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        div,input{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <input type="text">
+    <input type="text">
+<script>
+    console.log(document.compatMode)
+    // 标签的分类
+    // 按照结构分
+    //     单标签
+    //     双标签
+    // 按照展现形式分
+    //     行内 没有宽高 在一行中显示 a span
+    //         行内块 有宽高 在一行中显示
+    //     块级 有宽高 独占一行
+    //     表格 没人用，用ul，li替代，会给浏览器造成非常大计算负担
+</script>
+</body>
+</html>

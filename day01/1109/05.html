@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 变量
+        // 声明变量的关键字：var
+        // 语法：
+        // var 变量名 = 变量值;
+        // 变量名的命名规则：
+        // 1.严格区分大小写
+        // 2.只能是字母(大小写都行)，数字，下划线(_),美元符($)
+        // 3.不能以数字开头
+        // 4.不能是JavaScript中的关键字和保留字
+
+
+        // 数据类型：
+        // 原始（基本、简单）数据类型：5种 number string boolean undefined 空（null）
+        // 引用（复杂）数据类型：object function ...
+
+        // typeof(需要检测的内容) 返回几种值(7种)：function number string boolean undefined object  symbol(ES6中新增的)
+
+
+
+
+        // 面试题：
+        // 1.javascript中有哪些数据类型？
+        // 2.你是怎么去检测这些数据类型的？   typeof
+        // 3.typeof会返回几种值？分别是什么？
+        // 4.你用typeof去检测null，[],{},分别是什么?
+        // 5.你是如何区分这些object？
+            // Object.prototype.toString.call(检测的内容)
+
+        
+        // 开发技巧：
+        // 数字和布尔是蓝色，字符串是黑色，null和undefined是浅灰色
+
+        var a = 10;
+        var b = "hello";
+        var c = true;
+        var d;
+        var e = null;   //只要null写出来就表示叫对象占位符
+        var f = [];
+        var g = {};
+// 
+        // console.log(d)
+        // console.log( typeof(d) )
+        // console.log(typeof( typeof(d) ))
+
+        console.log( typeof(e) )
+        console.log( typeof(f) )
+        console.log( typeof(g) )
+
+
+        console.log( Object.prototype.toString.call(e) )
+        console.log( Object.prototype.toString.call(f) )
+        console.log( Object.prototype.toString.call(g) )
+    </script>
+</body>
+</html>

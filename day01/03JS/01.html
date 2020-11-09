@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+JavaScript特点(脚本编程语言)
+逐行执行 从上往下依次执行 如果一行报错，改代码块后续代码都不会执行（单线程特点）
+弱类型：声明变量的时候不需要设置数据类型 数据类型是由变量值来进行决定的
+    强类型：声明变量的时候必须指定数据类型 并且后期不能随意更改数据类型 java
+解释型：编译一行执行一行
+    编译型 全部编译再执行
+
+JavaScript使用方式
+1.行内JavaScript事件
+2.内部JavaScript
+3.外部JavaScript
+4.模块化导入 ES6
+
+
+变量
+声明变量名的命名规则 var
+语法
+var 变量名=变量值
+变量名的命名规则
+1.严格区分大小写
+2.只能是字母 数字 下划线
+3.不能以数字开头
+4.不能是JavaScript中的关键字和保留字
+
+数据类型
+原始数据类型 5种 number string boolean undefined 空
+引用数据类型 object function
+
+typeof 返回值 7种 function number string Boolean undefined object symbol
+
+
+开发技巧
+数字和布尔是蓝色 字符串是黑色 null和undefined是浅灰色
+
+面试题
+1.javascript中有哪些数据类型
+2.你是怎么去检测这些数据类型的
+3.typeof会返回几种值？分别是什么？
+4.你要typeof去检测null，对象数组分别是什么？
+-->
+<script>
+    var a=10
+    var b='hello'
+    var c=true
+    var d
+    var e=null //只要null写出来就是表示叫对象占位符
+    var f=[]
+    var g={}
+    console.log(typeof (a))
+    console.log(typeof (b))
+    console.log(typeof (c))
+    console.log(typeof (d))
+    console.log(typeof (e))
+    console.log(typeof (f))
+    console.log(typeof (g))
+
+    console.log(typeof(typeof (d)))
+    console.log(Object.prototype.toString.call(e))
+    console.log(Object.prototype.toString.call(f))
+    console.log(Object.prototype.toString.call(g))
+</script>
+</body>
+</html>

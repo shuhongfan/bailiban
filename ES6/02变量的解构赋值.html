@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let a=1
+    // let b=2
+    // let c=3
+
+    // let [a,b,c]=[1,2,3]
+
+    // let [foo,[[bar],baz]]=[1,[[2],3]]
+    // console.log(foo)
+    // console.log(bar)
+    // console.log(baz)
+
+    // let [,,third]=['foo','bar','baz']
+    // console.log(third)
+
+    // let[x,,y]=[1,2,3]
+    // console.log(x,y)
+
+    // let {log,sin,cos}=Math
+    // const {log}=console
+
+    // let {foo:baz}={foo:'aaa',bar:'bbb'}
+    // console.log(baz)
+
+    // let obj={first:'hello',last:'world'}
+    // let {first:l,last:f}=obj
+    // console.log(f)
+    // console.log(l)
+
+
+    // let obj={
+    //     p:[
+    //         'Hello',
+    //         {y:'World'}
+    //     ]
+    // }
+    // let {p:[x,{y}]}=obj
+    // console.log(x)
+    // console.log(y)
+
+    let obj={}
+    let arr=[]
+    ({foo:obj.prop,bar:arr[0]}={foo:123,bar:true})
+    console.log(obj)
+    // console.log(arr)
+</script>
+</body>
+</html>

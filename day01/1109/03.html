@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div02{
+            font-size: 20px;
+        }
+        div>#div02{
+            color: red;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .div #div02{
+            color: green;
+        }
+        #div01 #div02{
+            color: yellow;
+        }
+        .div01>.div02>.div03 此处省略8个{   110
+
+        }
+        #div01{   100
+
+        }
+    </style>
+</head>
+<body>
+    <div class="div01">
+        <div class="div02">
+            <div class="div03">
+                <div id="div01"></div>
+            </div>
+        </div>
+    </div>
+    <!-- 
+        http://css.doyoe.com/
+        1.什么是css？
+        层叠样式表，HTML做网页的基本架构，CSS做网页的修饰，美容部分
+
+        2.版本的区分？
+        css2
+        css3  可能会涉及到兼容性的问题  前缀写了一定不会有问题。不写可能会有问题
+
+        3.有多少浏览器？五种
+        谷歌  火狐   IE  苹果   欧朋
+        360浏览器   高速，安全，双核（IE+谷歌）  
+
+        4.颜色的表示方式？3种
+            4.1 颜色色值表示方式   red
+            4.2 rgb  rgba
+                rgb(0-255)
+            4.3 16进制表示法
+                #xx yy zz    #xyz
+
+        5.css的引入方式  4种
+            5.1 内联样式   标签中的style    基本上工作不会用，因为要留给js进行操作
+            5.2 内部样式表   style标签中    自己完成测试的时候用到最多
+            5.3 外部样式表   link标签中     工作中用到最多的
+            5.4 外部导入                   工作中用到比较多
+
+        6.css选择器的权重 只考虑css2中的选择
+        id       100
+        class     10
+        元素       1
+        通配符     0
+        内联样式最高，!important只要出现就以这个为主
+        注意：1.权重不是说权重高的别的选择器没有用了，而是冲突部分的样式以权重高的为主
+            2.不要做无聊的事情  因为存储空间不一样，老版本的浏览器可以用257个class干掉一个id
+
+    
+
+
+
+
+
+
+
+
+
+
+     -->
+</body>
+</html>
