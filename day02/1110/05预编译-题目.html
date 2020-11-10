@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function test(a,b){
+			// 内部的原理，浏览器底层代码，我们可根据实际情况进行模拟
+            // 1.test.AO = {
+
+            // }
+            // 2.test.AO = {
+            //     a : 1
+            //     b : undefined
+            // }
+            // 3.test.AO = {
+            //     a : 1
+            //     b : undefined
+            // }
+            // 4.test.AO = {
+            //     a : function a(){};
+            //     b : undefined
+            // }
+            // 此时，已经预解析过程分析完毕，开始逐行执行代码，沿着test.AO对象开始执行代码
+            // 活动对象后期肯定会发生改变的。预解析过程分析过的就不用管，没分析执行（var后面的赋值部分）
+            
+            console.log(a);  //function a(){};
+			console.log(b);  //undefined
+			var b = 234;
+            // test.AO = {
+            //     a : function a(){};
+            //     b : 234
+            // }
+			console.log(b);   //234
+			a = 123;
+            // test.AO = {
+            //     a : 123
+            //     b : 234
+            // }
+			console.log(a);  //123
+			function a(){};
+			var a;
+			b = 456;
+            // test.AO = {
+            //     a : 123
+            //     b : 456
+            // }
+			var b = function(){}
+            // test.AO = {
+            //     a : 123
+            //     b : function(){}
+            // }
+			console.log(a);   //123
+			console.log(b);   //function(){}
+		}
+		test(1);
+		
+		
+		
+	</script>
+</body>
+</html>

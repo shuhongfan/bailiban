@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //    > >=  <   <=  == !=        (===   !== javascript中独有的)
+
+        // 赋值运算符
+        // += -= *= /=
+
+        var a = 10;
+        // a = a + 1;
+        // a+=1
+        // a++
+
+        // 前++ 储存新值，使用新值
+        // 后++ 存储新值，使用旧值
+        var num = ++a + a++ + ++a;
+                11
+                11
+                        12
+                        11
+                               13
+                               13
+        console.log(a)  //13   12
+        console.log(num) //32   34
+
+
+
+
+    </script>
+</body>
+</html>

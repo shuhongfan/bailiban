@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 函数声明及函数表达式
+
+        // 区别：
+        // 使用：没有任何区别的
+        // 对预解析有影响的
+        // 本质：函数声明式函数，函数表达式是声明的变量
+        // 区分：函数声明是以funtion开头，其他的全是函数表达式
+            // 1.一旦函数声明变成了函数表达式，就会放弃函数名（只能看，没有任何作用），函数表示式一般都是没有函数名的
+            // 2. ()执行符号
+            // 不能去直接执行函数声明
+            // 可以去执行函数表达式
+
+        // var abc = function fun(){
+        //     console.log("hello")
+        // }
+        // 函数是引用类型，函数也是一个对象，函数对象，对象就有自己的属性和方法
+        // console.log(fun.name)    //函数的名字
+        // console.log(fun.length)  //形参的个数
+
+        
+        
+        
+        // console.log(abc.name)   //fun
+        // console.log(abc.length) //0
+        
+        // fun()
+
+
+
+
+        // 立即执行函数
+
+        // var a = 10
+
+        // ;(function(){
+        //     console.log("hello")
+        // })()
+
+        
+        // 面试题： 控制台显式什么内容
+        function fun(a,b,c,d){
+            console.log(a + b + c + d)
+        }(1,2,3,4) 
+
+
+        //undefined  不知道
+    </script>
+</body>
+</html>

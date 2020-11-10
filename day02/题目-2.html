@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// AO1={
+		// 	a: 1
+		// }
+		// AO2={
+		// 	a: 1,
+		// 	b: undefined
+		// }
+		// AO3={
+		// 	a: function a(){},
+		// 	b: undefined,
+		// 	c: function c(){}
+		// }
+		function fn(a){
+				console.log(a); // function a(){}
+
+				var a = 123;
+			// AO={
+			// 	a: 123,
+			// 	b: undefined,
+			// 	c: function c(){}
+			// }
+				console.log(a); // 123
+
+				function a(){};
+
+				console.log(a); // 123
+
+				var b = function(){}
+			// AO={
+			// 	a: 123,
+			// 	b: function(){},
+			// 	c: function c(){}
+			// }
+				console.log(b);  // function (){}
+
+				function c(){};
+
+				console.log(c); // function c(){}
+			}
+			fn(1);
+	</script>
+</body>
+</html>

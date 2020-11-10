@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 运算符：
+        // 数学运算： + - * / %
+        // /因为JavaScript中只有数字类型，不区分整型和浮点型
+        // -*/%全部会触发隐式转换，字符串都会进行触发
+            // 1.字符串能转就转，不能转就转成NaN
+
+
+        // +
+        // 1.数学运算的加法
+            // 除去字符串的情况，其他类型相加都是数学运算
+                // 可能会去触发隐式转换
+
+        // 2.字符串的拼接
+            // 任何类型只要跟字符串相加都是字符串的拼接
+
+        // NaN（not a number）属于一个特殊的数字，因为是数字类型
+
+        // 转换：
+        //     隐式转换
+                // true转换成1
+                // false转换成0
+                // undefined转换成NaN
+                // null转换成0
+        //     强制(显式)转换  能转就转，不能转就转成NaN
+            // parseInt()
+                // 字符串类型的小数会舍弃小数部分并转换成数字类型
+                // 如果以数字开头，里面含有字符，会截取前面数字部分转换成数字类型
+            
+            // parseFloat()
+
+            // Number()   只能进行纯数字的字符串转换
+
+            // +
+
+    
+        var a = "10abc";
+        console.log(+a)
+
+
+        // 逻辑运算：
+        // && || ！
+    </script>
+</body>
+</html>

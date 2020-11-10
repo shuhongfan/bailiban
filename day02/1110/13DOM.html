@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>洪山区</li>
+        <li id="wuchang">武昌区</li>
+        <li>汉阳区</li>
+    </ul>
+
+    <script>
+        // 面试中可能会问到：实时性的问题
+        // var li = document.querySelectorAll("li");
+        var li = document.getElementsByTagName("li");
+        var wuchang = document.getElementById("wuchang");
+        wuchang.remove()
+
+        console.log(li)
+
+
+
+        // 作业：
+        // 1.题目1，题目2 题目3 写出分析的结果，上交
+        // 2.今天的笔记整理   上交
+        // 3.博客更新
+        // 4.思维导图
+    </script>
+</body>
+</html>

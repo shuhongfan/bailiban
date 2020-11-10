@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function fun() {
+        var num=100
+        function a() {
+            num++
+            console.log(num)
+        }
+        function b() {
+            num--
+            console.log(num)
+        }
+        return [a,b]
+    }
+    var fn=fun()
+    var fn1=fun()[0]
+    var fn2=fun()[1]
+
+    fn1()
+    fn1()
+    fn2()
+    fn2()
+</script>
+</body>
+</html>

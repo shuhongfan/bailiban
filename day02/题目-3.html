@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// AO1={
+		// 	a: undefined
+		// }
+		// AO2={
+		// 	a: undefined,
+		// 	fn:function fn() {}
+		// }
+			a = 100;
+			function fn(){
+				console.log(a); // undefined
+				a = 200;
+				// AO2={
+				// 	a: 200,
+				// 	fn:function fn() {}
+				// }
+				console.log(a); // 200
+				var a = 300;
+			}
+			fn();
+			var a;
+
+
+			// Ao1={
+			// 	a:undefined,
+			// }
+			// Ao2={
+			// 	a:undefined,
+			// 	test:function test(){}
+			// }
+			function test(){
+				// test.AO={
+				// 	b: undefined
+				// }
+				console.log(b); // undefined
+				if(a){
+					var b = 100;
+					// test.AO={
+					// 	b: 100
+					// }
+				}
+				console.log(b); //100
+				c = 234;
+				// test.AO={
+				// 	b: 100,
+				//	c:234
+				// }
+				console.log(c); // 234
+			}
+			var a;
+			test();
+			console.log(c) // 234
+
+
+		// 百度面试题
+		function bar(){
+			// AO={
+			// 	foo:function ()
+			// }
+			return foo;
+			foo = 10;
+			// AO={
+			// 	foo:10
+			// }
+			function foo(){
+
+			}
+			var foo = 11;
+			// AO={
+			// 	foo:11
+			// }
+		}
+		console.log(bar()) // 11
+
+
+			console.log(bar()); // 11
+			function bar(){
+				// AO={
+				// 	foo:function ()
+				// }
+				foo = 10;
+				// AO={
+				// 	foo:10
+				// }
+				function foo(){}
+				var foo = 11;
+				// AO={
+				// 	foo:11
+				// }
+				return foo;
+			}
+
+
+		// AO={
+		// 	e: 1,
+		// 	a: 100
+		// }
+			a = 100;
+			function demo(e){
+				function e(){}
+				arguments[0] = 2;
+				// AO={
+				// 	e: 2,
+				// 	a: 100
+				// }
+				console.log(e); // 2
+				if(a){
+					// a.AO={
+					// 	b: undefined
+					// 	c:function c()
+					// }
+					var b = 123;
+					// a.AO={
+					// 	b: 123
+					// 	c:function c()
+					// }
+					function c(){
+					}
+				}
+				var c;
+				a = 10;
+				// AO={
+				// 	e: 2,
+				// 	a: 10
+				// }
+				var a;
+				console.log(b); // undefined
+				f = 123;
+				// AO={
+				// 	e: 2,
+				// 	a: 10,
+				//  f: 123
+				// }
+				console.log(c); // undefined
+				console.log(a); // 10
+			}
+			var a;
+			demo(1);
+			console.log(a); // 100
+			console.log(f); // 123
+		</script>
+</body>
+</html>

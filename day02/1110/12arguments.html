@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // arguments 和 形参有映射关系
+
+        // 1.当形参和实参没有对应的时候，没有对应的形参和arguments没有办法形成映射关系
+        // 2.开启了严格模式，形参和arguments就不会有映射关系
+        function fun(a,b,c){
+            'use strict'
+            c = 30
+            console.log(a,b,c)
+            console.log(arguments)
+            console.log(arguments[2])
+        }
+        fun(1,2,3)
+    </script>
+</body>
+</html>
