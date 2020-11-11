@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+        var obj = {
+			"2" : "a",     //0   2
+			"3" : "b",     //1   3
+			"length" :2,
+			"push" : Array.prototype.push
+		}
+		obj.push("c");
+		obj.push("d");
+		console.log(obj)
+
+
+
+        // 所有的dom获取元素出来全都是类数组
+        // 类数组（伪数组）的本质是一个对象
+        // 类数组必须含有length属性
+        // 类数组调用了数组的push方法以后，可以沿着length属性进行扩展
+
+
+        // var arr = ["a","b","c"];
+        // arr.push("d")
+        // console.log(arr)
+        // console.log(arr.length)
+
+        // var obj = {
+        //     "0" : "a",
+        //     "1" : "b",
+        //     "2" : "c",
+        //     "length" : 3,
+        //     "push" : Array.prototype.push
+        // }
+        // obj.push("d")
+        // console.log(obj)
+        // console.log(obj.length)
+
+
+
+
+        // var divs = document.getElementsByTagName("div");
+        // console.log(divs)
+    </script>
+</body>
+</html>

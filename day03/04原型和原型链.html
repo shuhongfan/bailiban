@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+原型是定义一个对象的公共祖先
+
+JavaScript基于对象，对象就是通过构造函数来的
+prototype   构造函数的属性，负责定义
+__proto__   对象的属性，负责查看
+
+作用域也是一个对象，但是这个对象看不到，只能通过执行的场景进行模拟（GO、AO）
+原型也是一个对象，这个对象时可以看到的对象
+-->
+<script>
+    var arr=[]
+    console.log(arr.__proto__)
+    console.log(Array.prototype)
+
+    var obj={
+        name:'小米',
+    }
+    console.log(obj.__proto__)
+    console.log(Object.prototype)
+    obj.__proto__={ // es6中新增的，千万不要改，如果要改，一定通过prototype修改
+        name:'大米'
+    }
+    console.log(obj.__proto__)
+    console.log(Object.prototype)
+
+    Object.prototype.abcd='小米他爹'
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 原始数据类型 严格上来说，属于对象，但是没有对象的特点
+    // 引用数据类型 有对象的特点
+    // 包装类 把原始类型进行一个包装 包装成一个引用类型 就有引用类型的特性
+
+    var str='hello world' // 原始类型
+    var str1=new String() // 构造函数出来的内容一定是一个引用类型
+    var num=new Number(123)
+    console.log(num)
+
+
+    var str='hello world'
+    var str=new String('hello world')
+    if (str.length==11){
+        str.abc='字符串长度为11' // 原始类型添加了属性就马上销毁
+    }
+    console.log(str.abc)
+</script>
+</body>
+</html>

@@ -10,64 +10,34 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d44a367a-26da-4acf-b142-39811ca3507f" name="默认的" comment="day01">
-      <change afterPath="$PROJECT_DIR$/Mind-mapping-of-front-end-knowledge/CSS/CSS.emmx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mind-mapping-of-front-end-knowledge/CSS/CSS.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mind-mapping-of-front-end-knowledge/ES6/ES6.emmx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mind-mapping-of-front-end-knowledge/ES6/ES6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mind-mapping-of-front-end-knowledge/HTML/HTML.emmx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mind-mapping-of-front-end-knowledge/HTML/HTML.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mind-mapping-of-front-end-knowledge/HTML5/HTML5-新增标签和属性.emmx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mind-mapping-of-front-end-knowledge/HTML5/HTML5-新增标签和属性.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mind-mapping-of-front-end-knowledge/JQuery/JQuery.emmx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mind-mapping-of-front-end-knowledge/JQuery/JQuery.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mind-mapping-of-front-end-knowledge/JS/JS.emmx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mind-mapping-of-front-end-knowledge/JS/JS.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mind-mapping-of-front-end-knowledge/JS/基本包装类型—string类型.emmx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mind-mapping-of-front-end-knowledge/JS/基本包装类型—string类型.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mind-mapping-of-front-end-knowledge/vue/vue.emmx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mind-mapping-of-front-end-knowledge/vue/vue.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mind-mapping-of-front-end-knowledge/复习/CSS.emmx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mind-mapping-of-front-end-knowledge/复习/HTML.emmx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day01/1109计网4班 - 舒洪凡.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day01/CSS.xmind" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day01/HTML.xmind" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/01数学运算.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/02比较运算.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/03.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/04.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/05预编译.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/06作用域链.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/07闭包.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/08闭包.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/09闭包.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/10闭包.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/1110.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/1110/01数学运算.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/1110/02比较运算.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/1110/03.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/1110/04函数声明及函数表达式.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/1110/05预编译-题目.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/1110/06作用域链.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/1110/07闭包.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/1110/08闭包.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/1110/09闭包.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/1110/10闭包.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/1110/11闭包.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/1110/12arguments.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/1110/13DOM.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/1110/作用域链.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/1110/题目-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/1110/题目-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/1110/题目-3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/1110计网4班 - 舒洪凡.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/11DOM.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/12arguments.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/题目-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/题目-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02/题目-3.html" afterDir="false" />
+    <list default="true" id="d44a367a-26da-4acf-b142-39811ca3507f" name="默认的" comment="day02">
+      <change afterPath="$PROJECT_DIR$/day02/1110计网4班 - 舒洪凡/1110计网4班 - 舒洪凡.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day02/1110计网4班 - 舒洪凡/CSS.xmind" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day02/1110计网4班 - 舒洪凡/HTML.xmind" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day02/1110计网4班 - 舒洪凡/博客.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day02/1110计网4班 - 舒洪凡/题目-1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day02/1110计网4班 - 舒洪凡/题目-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day02/1110计网4班 - 舒洪凡/题目-3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day03/01if判断.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day03/02原型.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day03/03包装类.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day03/04原型和原型链.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day03/05原型.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day03/06原型编程.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day03/07面试题.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day03/1111.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day03/1111/01预编译.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day03/1111/02if.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day03/1111/03对象.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day03/1111/04包装类.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day03/1111/05原型和原型链.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day03/1111/06原型.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day03/1111/07原型编程.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day03/1111/08面试题.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day03/1111计网4班 - 舒洪凡.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day01/笔记.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day02/1110计网4班 - 舒洪凡.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day02/题目-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/day02/题目-3.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,17 +68,19 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/day02" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/day03" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\DEMO\百里半\day02" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\DEMO\百里半\day02" />
       <recent name="F:\DEMO\百里半\html" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\DEMO\百里半\day03" />
+      <recent name="F:\DEMO\百里半\day03\1111" />
+      <recent name="F:\DEMO\百里半\day02" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -122,7 +94,8 @@
       <workItem from="1604885957156" duration="18189000" />
       <workItem from="1604970304710" duration="21141000" />
       <workItem from="1605008142909" duration="446000" />
-      <workItem from="1605014516665" duration="6409000" />
+      <workItem from="1605014516665" duration="6563000" />
+      <workItem from="1605056620260" duration="21971000" />
     </task>
     <task id="LOCAL-00001" summary="day01">
       <created>1604936634167</created>
@@ -131,7 +104,21 @@
       <option name="project" value="LOCAL" />
       <updated>1604936634167</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="day02">
+      <created>1605026274084</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605026274084</updated>
+    </task>
+    <task id="LOCAL-00003" summary="day02">
+      <created>1605026373169</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1605026373169</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,17 +139,18 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="day01" />
-    <option name="LAST_COMMIT_MESSAGE" value="day01" />
+    <MESSAGE value="day02" />
+    <option name="LAST_COMMIT_MESSAGE" value="day02" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2281" y="145" width="814" height="532" key="Vcs.Push.Dialog.v2" timestamp="1605008152240">
+    <state x="2281" y="145" width="814" height="532" key="Vcs.Push.Dialog.v2" timestamp="1605026374705">
       <screen x="1920" y="0" width="1536" height="824" />
     </state>
-    <state x="2281" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1605008152240" />
+    <state x="2281" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1605026374705" />
     <state x="361" y="146" width="814" height="532" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1604979231942" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1604990620072">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605076193986">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1604990620072" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1605076193986" />
   </component>
 </project>

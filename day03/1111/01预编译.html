@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+			// GO = {
+			// 	a : undefined
+			// 	demo : function
+			// }
+			// 开始执行
+			// GO = {
+			// 	a : 100
+			// 	demo : function
+            //     f : 123
+			// }
+			// demo执行前预编译
+			// demo.AO = {
+			// 	e : function e(){}
+			// 	b : undefined
+			// 	c : function c(){}   //可能会有兼容性的问题，答案可能为fun，undefined，error
+			// 	a : undefined
+			// }
+			// 开始逐行执行代码：
+			// demo.AO = {
+			// 	e : 2
+			// 	b : undefined
+			// 	c : function c(){}   //可能会有兼容性的问题，答案可能为fun，undefined
+			// 	a : 10
+			// }
+
+
+
+			a = 100;
+            var g = 200;
+			function demo(e,g){
+				function e(){}
+				arguments[0] = 2;
+				console.log(e);
+				if(a){  //false
+					var b = 123;
+					function c(){
+					}
+				}
+				var c;
+				a = 10;
+				var a;
+				console.log(b);
+				f = 123;   //没有声明的变量会暗示全局变量（GO），没有声明的变量全部归GO所有
+				console.log(c);  //会存在兼容性的问题，可能为undefined，function
+				console.log(a);
+                console.log(f)
+                console.log(g)
+                console.log(demo)
+			}
+			var a;
+			demo(1);
+			console.log(a); 
+			console.log(f); 
+    </script>
+</body>
+</html>

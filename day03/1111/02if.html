@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // true转换成1，false转换成0.   0转换成false，非0转换成true，出现在什么地方？
+
+        // if(){   条件全部要转换成boolean值的
+
+        // }
+        // 5大假值：0 空字符串 null undefined false 
+
+        // if判断中不要去做小数的运算的比较运算（面试题的重点）
+
+        // if(0.1 + 0.2 == 0.3){
+        //     console.log("hello")
+        // }
+        // console.log(0.1+0.2)   //面试的时候碰到这一类有小数的情况
+        // 小数的运算有可能会产生高精度的数
+
+        var num = 100;
+        for(var i = 1;i < 100000;i++){
+            num *= i;
+        }
+        console.log(num)
+
+        // var xhr = null;
+        // if(window.xmlHttprequest){
+        //     xhr = new XMLHttpRequest()
+        // }else{
+        //     xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        // }
+
+
+        // console.log(window.XMLHttpRequest)
+        // console.log(window.alksjdflsdk)
+
+        // console.log(laksdjflkds)
+        // 作用域链找不到就报错，原型链找不到就为undefined
+    </script>
+</body>
+</html>

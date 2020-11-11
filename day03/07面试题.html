@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<script>
+    var obj={
+        '2':'a',
+        '3':'b',
+        'length':2,
+        'push':Array.prototype.push
+    }
+    obj.push('c')
+    obj.push('d')
+    console.log(obj)
+
+
+    var arr=['a','b','c']
+    arr.push('d')
+    console.log(arr)
+    console.log(arr.length)
+
+    var obj1={
+        '1':'a',
+        '2':'b',
+        '3':'c',
+        'length':3,
+        'push':Array.prototype.push
+    }
+    obj1.push('a')
+    console.log(obj1)
+    console.log(obj1.length)
+
+    var divs=document.getElementsByTagName('div')
+    console.log(divs)
+</script>
+</body>
+</html>

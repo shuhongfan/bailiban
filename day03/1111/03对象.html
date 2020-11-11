@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 原型  原型链
+
+        // 对象
+        // 什么是对象？
+        // JavaScript中万物皆为对象
+
+        
+
+
+        // 对象的创建方式有几种？4种
+        // 1.{}   对象字面量（对象直接量）  工作中用到比较多的
+                  数组字面量
+                  正则
+                  字符串
+        // 2.new 构造函数
+            // 2.1. new Object()   new 系统构造函数    new出来以后是一个空对象，工作中基本很少用
+            // 2.2. new 自定义构造函数    工作中用到比较多的
+        // 4.Object.create()     ES5中新增的   以什么为原型创建对象
+
+        // () 函数执行符号
+        // 构造函数也属于函数
+        // 构造就是专门去出对象
+        // 人为规范（开发者制定出来的一套开发习惯）：
+            // 1.构造函数只能被new执行
+            // 2.写法：构造函数必须使用大驼峰命名（首字母大写）
+
+
+        // 面试题：
+        // 1.函数在被new关键字执行以后发生了什么样的过程？
+            // 1.内部隐式的创建了一个this的对象
+            // 2.在最后返回这个this对象
+            // 注意点：return值可以修改，但是只能去返回一个引用类型的值，如果是改成原始类型的值，是没有任何反应的
+        // 2.任何对象的最终原型都为object
+            // 正常是对的，但是仅有一种方法
+
+
+
+
+
+        var obj = Object.create(null);   //这是一个没有原型的对象，有且只有这一种写法
+        // console.log(obj)
+        obj.toString = function(){
+            return "这是一个没有原型的方法，再用alert抽死你！！！"
+        }
+        alert(obj)
+
+
+
+
+
+
+
+
+        // 在JavaScript中有几种输出方式？
+        // 1.document.write()
+        // 2.alert()
+        // 3.console.log()   毋庸置疑
+        // 前面这两种方式一定回去调用toString(),原型链的就近原则
+
+
+
+
+
+
+
+        // var arr = [1,2,3]
+        // var obj = {
+        //     a : 1,
+        //     b : 2
+        // }
+        // arr.toString = function(){
+        //     return "叫你不要用alert，为什么不听话"
+        // }
+        // alert(arr)
+        // console.log(arr)
+        // console.log(arr.toString())
+
+        
+
+
+
+
+
+
+
+
+
+
+        // var obj = {
+        //     name : "jack",
+        //     age : 18
+        // }
+        // var obj1 = Object.create(obj);
+        // console.log(obj1)
+        // console.log(obj1.name)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // // 自定义的构造函数
+        // function Fun(name,age){
+        //     // var this = {}
+        //     this.name = name;
+        //     this.age = age;
+        //     // return this
+
+        //     // return "hello"   //只能去返回一个引用类型的值，如果是改成原始类型的值，是没有任何反应的
+        //     return {}
+
+        // }
+        // var p = new Fun("黄林",25);
+        // console.log(p)
+        // var p1 = new Fun("李务宇",23);
+        // console.log(p1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // 对象的增删查改
+        // 增查改：对象打点
+        // obj.name = "jack";
+        // obj.age = 20;
+        // obj.name = "zhangsan"
+        // 删除
+        // delete obj.name
+
+
+
+        // console.log(obj)
+        // console.log(obj.name)
+    </script>
+</body>
+</html>
