@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.11.3/jquery.js"></script>
+</head>
+<body>
+<!--
+jQuery仅仅是在应用层
+
+就是JavaScript函数库，封装了一堆JavaScript函数
+write less do more
+
+jquery的官方版本 1 2 3
+1.x.x  1.11.3
+
+jquery的使用精髓
+1.选择元素
+2.循环操作
+3.链式调用
+
+-->
+<div></div>
+<div></div>
+<div>hello</div>
+
+<div class="wrapper">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<script>
+    // jquery对象 类数组
+    console.log($('div'))
+    var abc=$('div').css({
+        width:'100px',
+        height:'100px',
+        background:'red'
+    })
+    console.log(abc)
+    abc.css({
+        color:'green'
+    })
+
+    console.log($===jQuery)
+
+
+
+</script>
+</body>
+</html>

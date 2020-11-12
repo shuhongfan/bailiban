@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 数组中的所有元素相加，必须判断数组中的元素为数字类型
+    Array.prototype.mySum=function (arr) {
+        var sum=0
+        for (var i = 0; i < arr.length; i++) {
+            if (typeof arr[i] !== 'number'){
+                alert('只能是数字')
+                return sum=null
+            }
+            sum+=arr[i]
+        }
+        return sum
+    }
+    var arr=[1,2,3,4,5]
+
+    console.log(arr.mySum(arr))
+
+    // 排序（升序，降序），必须判断数组中的元素为数字类型
+    Array.prototype.mySort=function (arr,sort) {
+        for (var i = 0; i < arr.length; i++) {
+            if (typeof arr[i] !== 'number'){
+                alert('只能是数字')
+                return arr=null
+            }
+            for (var j = i+1; j < arr.length; j++) {
+                var temp=''
+                if (sort && arr[i] < arr[j]){
+                    temp=arr[i]
+                    arr[i]=arr[j]
+                    arr[j]=temp
+                } else if (arr[i] > arr[j]){
+                    temp=arr[i]
+                    arr[i]=arr[j]
+                    arr[j]=temp
+                }
+
+            }
+        }
+        return arr
+    }
+    var arr=[1,2,3,4,5]
+
+    console.log(arr.mySort(arr,0))
+
+
+    // 去重，必须判断数组中的元素为数字类型
+    Array.prototype.myDeDuplication=function (arr) {
+        var sum=0
+        for (var i = 0; i < arr.length; i++) {
+            if (typeof arr[i] !== 'number'){
+                alert('只能是数字')
+                return arr=null
+            }
+            for (var j = i+1; j < arr.length; j++) {
+                if (arr[i]==arr[j]){
+                    arr.splice(j,1)
+                    j--
+                }
+            }
+        }
+        return arr
+    }
+    var arr=[1,2,3,4,1,5,5,3,4]
+
+    console.log(arr.myDeDuplication(arr))
+</script>
+</body>
+</html>
