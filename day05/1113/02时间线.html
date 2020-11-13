@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <link rel="stylesheet" href="123.css"> -->
+</head>
+<body>
+    <div>
+        <img src="" alt="">
+        <script src=""></script>
+    </div>
+
+    <script>
+        // 1、创建document对象，开始解析web页面。创建HTMLHtmlElement对象，添加到document中。这个阶段document.readyState = 'loading'。
+        // 2、遇到link外部css，创建线程加载，并继续解析文档。并发
+        // 3、遇到script外部js，并且没有设置async、defer，浏览器创建线程加载，并阻塞，等待js加载完成并执行该脚本，然后继续解析文档。js拥有修改dom的能力-->domcument.write
+        // 4、遇到script外部js，并且设置有async、defter，浏览器创建线程加载，并继续解析文档。
+        // async属性的脚本，脚本加载完成后立即执行。
+        // defter==丢置尾部。
+        // document.createElement('script')的方式动态插入script元素来模拟async属性，实现脚本异步加载和执行。
+        // 5、遇到img等，浏览器创建线程加载，并继续解析文档。并发
+        // 6、当文档解析完成，document.readyState = 'interactive'。
+        // 7、文档解析完成后，所有设置有defer的脚本会按照顺序执行。（注意与async的不同）
+        // 8、document对象触发DOMContentLoaded事件，这也标志着程序执行从同步脚本执行阶段，转化为事件驱动阶段。
+        // 9、当所有async的脚本加载完成并执行后、img等加载完成后，document.readyState = 'complete'，window对象触发load事件。
+        // 10、从此，以异步响应方式处理用户输入、网络事件等。
+
+
+
+        // 1.开始解析html文件，会形成一个document对象，会开始产生dom树,loading状态，dom树正在形成中（深度优先原则）
+        // 2.遇到任何标签中的外链的资源，都会创建子线程去加载，唯独除了script标签，会用主线程加载（会阻塞DOM树的继续形成）
+        //     script标签如果设置了async、defer 跟其他含有外链标签一样的结果
+        // 3.dom树已经绘制完成，但是link中的href，img中的src... 不一定下载完成   interactive状态     触发DOMContentLoaded事件
+        // 4.link中的href，img中的src...  下载完成以后，   （必须前提：并且dom已经绘制完成）   complete状态（老版本的浏览器可能为loaded）  触发load事件
+
+
+
+        console.log(document.readyState)
+        document.onreadystatechange = function(){
+            console.log(document.readyState)
+        }
+
+
+        document.addEventListener('DOMContentLoaded',function(){    //jquery中的ready函数封装的源代码
+            console.log("dom树已经绘制完成，但是img，link标签中的资源不一定下载完成")
+        })
+        window.onload = function(){
+            console.log("dom树已经绘制完成,所有的资源全部下载完成")
+        }
+        // 面试题：jquery的ready函数和window.onload的区别？两个谁更快？
+
+
+        //                     document
+        //                       html
+        //           head                                  body         div      img       script（有且只有这一个需要自己亲自上的）
+        // meta   meta  title  link(href自己主线程不会继续加载，会派个小弟（子线程）去解析href里面内容，主线程继续去绘制dom树)
+    </script>
+</body>
+</html>

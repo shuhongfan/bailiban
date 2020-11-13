@@ -10,18 +10,33 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d44a367a-26da-4acf-b142-39811ca3507f" name="默认的" comment="day03">
-      <change afterPath="$PROJECT_DIR$/day03/1111计网4班 - 舒洪凡.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day03/1111计网4班 - 舒洪凡/06原型编程.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day03/1111计网4班 - 舒洪凡/1111计网4班 - 舒洪凡.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04/01jQuery.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04/02myjQuery.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04/03jQueryAPI.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04/04jQueryAPI.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04/1112计网4班 - 舒洪凡.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04/myjQuery.js" afterDir="false" />
+    <list default="true" id="d44a367a-26da-4acf-b142-39811ca3507f" name="默认的" comment="day04">
+      <change afterPath="$PROJECT_DIR$/day04/1112.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day04/1112/01jquery.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day04/1112/02myjQuery.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day04/1112/03jqueryAPI.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day04/1112/04jQueryAPI.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day04/1112/myjQuery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day05/01时间线.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day05/02js异步加载.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day05/03.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day05/03DOM.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day05/1113.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day05/1113/01.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day05/1113/02时间线.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day05/1113/03.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day05/1113/03js异步加载.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day05/1113/04DOM.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day05/1113/DOM中的原型关系.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day05/1113计网4班 - 舒洪凡/1113计网4班 - 舒洪凡.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day05/1113计网4班 - 舒洪凡/jQuery旋转展开菜单栏.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day05/1113计网4班 - 舒洪凡/jQuery旋转展开菜单栏/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day05/1113计网4班 - 舒洪凡/jQuery旋转展开菜单栏/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day05/1113计网4班 - 舒洪凡/jQuery旋转展开菜单栏/js/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day05/1113计网4班 - 舒洪凡/旋转展开菜单.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day03/1111计网4班 - 舒洪凡.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day04/04jQueryAPI.html" beforeDir="false" afterPath="$PROJECT_DIR$/day04/04jQueryAPI.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day04/1112计网4班 - 舒洪凡.docx" beforeDir="false" afterPath="$PROJECT_DIR$/day04/1112计网4班 - 舒洪凡.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +46,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="HTML File" />
       </list>
@@ -53,6 +69,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/day03" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -82,6 +99,8 @@
       <workItem from="1605056620260" duration="21971000" />
       <workItem from="1605092083308" duration="204000" />
       <workItem from="1605142957841" duration="21874000" />
+      <workItem from="1605194547826" duration="116000" />
+      <workItem from="1605229309758" duration="21883000" />
     </task>
     <task id="LOCAL-00001" summary="day01">
       <created>1604936634167</created>
@@ -111,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605092169345</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="day04">
+      <created>1605194565759</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1605194565759</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,18 +160,19 @@
     <MESSAGE value="day01" />
     <MESSAGE value="day02" />
     <MESSAGE value="day03" />
-    <option name="LAST_COMMIT_MESSAGE" value="day03" />
+    <MESSAGE value="day04" />
+    <option name="LAST_COMMIT_MESSAGE" value="day04" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="145" width="814" height="532" key="Vcs.Push.Dialog.v2" timestamp="1605092171675">
+    <state x="361" y="145" width="814" height="532" key="Vcs.Push.Dialog.v2" timestamp="1605194614044">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1605092171675" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1605194614044" />
     <state x="2281" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1605026374705" />
     <state x="361" y="146" width="814" height="532" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1604979231942" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605168186744">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605238273978">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1605168186744" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1605238273978" />
   </component>
 </project>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+DOM     文档对象模型
+JavaScript      ECMAscript  BOM DOM
+
+getElementById()  定义在 Document.prototype上面
+getElementsByTagName()  定义在HTMLDocument上面，因为XML根本用不到name属性
+getElementsByTagName()  定义在Document.prototype和Element.prototype上面
+
+getElementsByClassName()   定义在Document.prototype和Element.prototype上面
+querySelector()   定义在Document.prototype和Element.prototype上面
+querySelectorAll()   定义在Document.prototype和Element.prototype上面
+
+在HTMLDocument.prototype上面定义了两个属性 head和body
+在Document.prototype上面定义一个
+-->
+<script>
+    console.log(Document)
+    Document.prototype.abc='hello'
+    HTMLDocument.prototype.abc='hello world'
+    console.log(document.abc)
+    document.
+</script>
+</body>
+</html>

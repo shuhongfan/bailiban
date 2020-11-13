@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+js异步加载
+创建线程继续加载    而不是像以前一样的阻塞
+JavaScript异步加载有三种方式
+1.defer     老版本IE浏览器 可以在script标签中或者src
+2.async     W3C规范
+3.按需加载      经常在笔试中要求手写
+
+-->
+</body>
+<script type="text/javascript">
+    var script=document.createElement('script') //如果没有到dom树中去，完全不知道是什么标签
+    script.type='text/javascript'
+    script.src='03.js'      //创建线程继续加加载  此时script标签的src就成了异步
+    console.log(script)
+    document.head.appendChild(script)
+
+    // 03.js还没有下载完成
+    // 定时器延时
+    // setTimeout("test()",1000)
+
+    // 老版本IE不支持
+    // script.onload=function () {
+    //     test()
+    // }
+
+    // 老版本IE支持
+    // script.onreadystatechange=function () {
+    //     if (script.readState=='complete'||script.readState=='load'){
+    //         test()
+    //     }
+    // }
+
+    function loadScript(url,callback) {
+        var script=document.createElement('script')
+        script.type='text/javascript'
+        //script.src=url  document loading interactive complete
+        if (script.readyState){
+            script.onreadystatechange=function () {
+                if (script.readState=='complete'||script.readState=='load'){
+                    callback()
+                }
+            }
+        } else {
+            script.onload=function () {
+                callback()
+            }
+        }
+        script.src=url
+        document.head.appendChild(script)
+    }
+    loadScript('03.js',function () {
+        test()
+    })
+</script>
+</html>

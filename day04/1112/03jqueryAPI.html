@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.11.3/jquery.js"></script> -->
+
+    <script src="myjQuery.js"></script>
+</head>
+<body>
+    <div class="demo">1</div> 
+    <div class="demo">2</div> 
+    <div class="demo">3</div> 
+
+    <script>
+        // DOM操作相关的
+        // get()   eq()     find()     filter()     not()    is()   has()    add()    end()
+        // get  eq   and   end 去玩下源码
+        // find   filter   not  is     has
+
+
+
+        // get      数组（undefined,null）
+        // 0 1 2 3 4 -1 -2 -3   dom对象
+        // console.log($(".demo"))
+        // console.log($(".demo").get(null))    //数组
+        // console.log($(".demo").get())    //数组
+        // console.log($(".demo").get(0))
+        // console.log($(".demo").get(1))
+        // console.log($(".demo").get(2))
+        // console.log($(".demo").get(3))
+
+        // console.log($(".demo").get(-1)) 
+        // console.log($(".demo").get(-2))
+        // console.log($(".demo").get(-3)) 
+
+        // console.log($(".demo").get(-4))
+
+
+
+        // var div = document.getElementsByClassName("demo");
+        // console.log(div[0])
+        // console.log($(div))    //jquery对象和dom对象的相互转换的问题
+
+        console.log($(".demo").eq(0))
+        console.log($(".demo").eq(1))
+        console.log($(".demo").eq(2))
+        console.log($(".demo").eq(3))
+        console.log($(".demo").eq(-1))
+        console.log($(".demo").eq(-2))
+        console.log($(".demo").eq(-3))
+        console.log($(".demo").eq(-4))
+    </script>
+</body>
+</html>

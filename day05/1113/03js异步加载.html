@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script >
+        // 创建线程继续加载，而不是像以前一样的阻塞
+        // JavaScript异步加载有三种方式
+        // 1.defer   老版本IE浏览器   可以写在script标签中或者src
+        // 2.async   W3C规范   只能把js写在src中
+        // 3.按需加载  经常在笔试要求手写
+
+
+    </script>
+</head>
+<body>
+        body
+    script 
+    <script type="text/javascript">
+        var script = document.createElement("script");   //如果没有到dom树中去，完全不知道是什么标签
+        script.type = 'text/javascript';
+        script.src = "03.js"   //src   创建线程继续加载,异步
+        // console.log(script)
+        document.head.appendChild(script)
+
+
+        // test()    03.js可能还没有下载完成
+        // setTimeout("test()",1000);
+        // script.onload = function(){   //老版本IE不支持
+        //     test()
+        // }
+
+        // script.onreadystatechange = function(){   //老版本的浏览器
+        //     if(script.readyState == "complete" || script.readyState == "loaded"){
+        //         test()
+        //     }
+        // }
+
+        function loadScript(url,callback){
+            var script = document.createElement("script");
+            script.type = 'text/javascript';
+            // script.src = url;      loading  interactive  complete
+            
+            if(script.readyState){
+                script.onreadystatechange = function(){   //老版本的浏览器
+                    if(script.readyState == "complete" || script.readyState == "loaded"){
+                        callback()
+                    }
+                }
+            }else{
+                script.onload = function(){   //老版本IE不支持
+                    callback()
+                }
+            }
+            script.src = url;
+            document.head.appendChild(script)
+        }
+
+
+        loadScript("03.js",function(){
+            test()
+        })
+    </script>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.11.3/jquery.js"></script>
+</head>
+<body>
+    <div class = "div"></div>
+    <div class = "div"></div>
+    <div class = "div">hello</div>
+    <script>
+        // jQuery仅仅是在应用层
+        // 就是JavaScript函数库，封装了一堆JavaScript函数
+        // write less do more  人狠话不多
+        // jquery 官方的版本  1  2  3
+        // 2   3 的版本已经是放弃了老版本的IE
+        // 1.x.x     1.11.3  
+
+        // jQuery的使用精髓
+        // 1.选择元素   
+        // 2.循环操作   
+        // 3.链式调用
+
+
+        console.log($)
+        console.log(jQuery)
+        console.log($ === jQuery)
+        console.log($(".div"))   //jquery 对象  类数组
+
+
+        $(".div").css({
+            width : "100",
+            height : "100",
+            background : "red"
+        }).css({
+            color : "green"
+        }).css({
+            fontSize : "50px"
+        })
+
+    </script>
+</body>
+</html>
