@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1 1 2 3 5 8 13 21 34 55...
+        // 传递具体的位数，看具体的位数是什么？
+
+        // 1.找公式
+        // feiBo(n) = feiBo(n - 1) + feiBo(n - 2)
+        // 2.找出口
+        function feiBo(n){
+            if(n == 1 || n == 2){
+                return 1;
+            }
+            return feiBo(n - 1) + feiBo(n - 2)
+        }
+        console.log(feiBo(10))
+
+        // feiBo(5)   ===      feiBo(4)    +  feiBo(3)
+        // feiBo(4)  ===      feiBo(3) +  feiBo(2)
+
+        // 递归的效率是最低的，但是可读性非常高，非常容易理解
+    </script>
+</body>
+</html>

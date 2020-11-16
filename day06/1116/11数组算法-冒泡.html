@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [5,9,1,3,6,7,2,8];
+        // 1.比较
+        function compare(a,b){
+            if(a > b){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        // 2.交换
+        function exchange(arr,a,b){
+            var temp = arr[a];
+            arr[a] = arr[b];
+            arr[b] = temp;
+        }
+
+
+        function sort(arr){
+            if(arr == null || arr.length == 0) return [];
+            for(var i = 0;i < arr.length;i++){
+                for(var j = 0; j < arr.length - 1 - i;j++){
+                    if( compare(arr[j],arr[j+1]) ){
+                        exchange(arr,j,j+1)
+                    }
+                }
+            }
+            return arr;
+        }
+
+        console.log(sort(arr))
+    </script>
+</body>
+</html>

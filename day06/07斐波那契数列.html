@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+
+
+
+
+-->
+<script>
+    // 传递具体的位数  看具体的位数是什么
+    // 1 1 2 3 5 8 13 21 34 55 ... 斐波那契数列
+    // 1.找公式
+    // 2.找出口
+    function feiBo(n) {
+        if (n==1||n==2) return 1
+        return feiBo(n-1)+feiBo(n-2)
+    }
+    console.log(feiBo(10))
+    // 递归的效率最低的，但是可读性非常高，非常容易理解
+</script>
+</body>
+</html>

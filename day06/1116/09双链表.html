@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Node(value){
+            this.value = value;
+            this.next = null;
+            this.prev = null;
+        }
+        var node1 = new Node(1);
+        var node2 = new Node(2);
+        var node3 = new Node(3);
+        var node4 = new Node(4);
+        var node5 = new Node(5);
+        node1.next = node2;
+
+        node2.next = node3;
+        node2.prev = node1;
+
+        node3.next = node4;
+        node3.prev = node2;
+
+        node4.next = node5;
+        node4.prev = node3;
+
+        node5.prev = node4;
+
+        console.log(node3);
+        优点： 不管你给出哪一个节点，都可以对整个链表进行遍历
+        缺点： 存储结构变得稍微复杂，思想简单，但是代码量会增大
+    </script>
+</body>
+</html>

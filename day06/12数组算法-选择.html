@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 选择排序：每一圈选择最大的数，放在最后面
+    var arr=[5,9,1,3,6,7,2,8]
+    // 1.比较
+    function compare(a,b) {
+        if (a<b){
+            return true
+        } else {
+            return false
+        }
+    }
+    // 2.交换
+    function exchange(arr,a,b) {
+        var temp=arr[a]
+        arr[a]=arr[b]
+        arr[b]=temp
+    }
+
+    function sort(arr) {
+        if (arr==null || arr.length==0) return []
+        for (var i = 0; i < arr.length; i++) {
+            var maxIndex=0 // 初始化一个索引
+            for (var j = 0; j < arr.length-i; j++) {
+                if (compare(arr[maxIndex],arr[j])){
+                    maxIndex=j
+                }
+            }
+            exchange(arr,maxIndex,arr.length-1-i)
+        }
+        return arr
+    }
+
+    console.log(sort(arr))
+</script>
+</body>
+</html>

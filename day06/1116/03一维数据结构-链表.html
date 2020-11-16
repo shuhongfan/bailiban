@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 链表：本质就是一个对象
+        // 一维的数据结构（链表）多个对象形成一个关系
+
+        // 1.空间是不连续的
+        // 2.每存放一个值，都要开辟一个新的引用空间
+        // var a = {
+        //     value : 1,
+        //     next : b
+        // }
+        // var b = {
+        //     value : 2
+        //     next : null
+        // }  
+        // 优缺点：
+        // 优点：
+        // 1. 内存只要足够大，就可以存，完全不需要担心空间碎片的问题
+        // 2. 删除和添加是非常方便的
+        // 缺点：
+        // 1.里面每个对象都有一个next属性，就会创建一个存储空间，消耗资源（next属性属于微乎其微，如果存储的内容越多，影响越小）
+        // 2.查询速度会受到影响。（指定位置的查询会受到影响）
+        
+
+        // 我们玩的链表都是单链表
+        // 每一个节点，都认为自己是根节点
+
+        function Node(value){
+            this.value = value;
+            this.next = null;
+        }
+        var a = new Node(1);
+        var b = new Node(2);
+        var c = new Node(3);
+        var d = new Node(4);
+        a.next = b;
+        b.next = c;
+        c.next = d;
+        d.next = null;
+        console.log(a)
+        console.log(a.value)
+        console.log(a.next.value)
+        console.log(a.next.next.value)
+        console.log(a.next.next.next.value)
+        console.log(a.next.next.next.next)
+
+
+    </script>
+</body>
+</html>

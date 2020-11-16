@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+
+
+
+-->
+<script>
+    // 阶乘
+    function fun(n) {
+        var num=1
+        for (var i = 1; i <=n; i++) {
+            num*=i
+        }
+        return num
+    }
+    console.log(fun(5))
+
+    // 阶乘 n*(n-1)
+    function fun1(n) {
+        if (n==1||n==0) return 1
+        return n*fun(n-1)
+    }
+    console.log(fun1(5))
+
+    // 递归
+    // 1.找规律
+    // 2.找出口
+
+    // 优点
+    // 1.节省代码
+    // 2.可以看得懂
+    // 缺点
+    // 1.存储空间释放不了
+</script>
+</body>
+</html>
