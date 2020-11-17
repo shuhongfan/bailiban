@@ -10,12 +10,16 @@
 .score01>span{
     color: red;
 }
+#score02{
+    color: red;
+}
 .container{
     width: 480px;
     height: 480px;
     border-radius: 10px;
     margin: 0 auto;
     background-color: greenyellow;
+    transition: all .3s;
 }
 
 .cell{
@@ -30,7 +34,6 @@
     line-height: 100px;
     color: red;
 }
-
 .n2{
     background-color: #eee4da;
     color: #666;

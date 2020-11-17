@@ -64,7 +64,7 @@ var game={
         // 视图更新 关注游戏是否结束
         // 直接根据状态判断游戏是否结束
         if (this.status==this.gameOver){
-            document.getElementById('score01').innerHTML=this.score
+            document.getElementById('score02').innerHTML=this.score
             document.getElementById('gameover').style.display='block'
         } else {
             document.getElementById('gameover').style.display='none'
@@ -94,6 +94,8 @@ var game={
         }
         return true //上面三个条件不满足，结束游戏
     },
+
+
     // 左移动
     moveLeft: function () {
         // 移动之前 数组记录一次
@@ -153,6 +155,8 @@ var game={
         return -1 //没找到就返回一个具体位置
     },
 
+
+
     // 右移动
     moveRight: function () {
         // 移动之前 数组记录一次
@@ -183,9 +187,10 @@ var game={
     // 处理每一行的逻辑函数
     moveRightInRow: function (r) {
         // 找后面不为0的位置
-        for (var c = 3; c >= 0; c--) { // 最右边的不用考虑
+        for (var c = 3; c > 0; c--) { // 最右边的不用考虑
             var nextc=this.getNextInRowRight(r,c)
             if (nextc!=-1){ // 表示当前位置的后面有数字
+                console.log(this.data)
                 if (this.data[r][c]==0){ // 自己的位置为0 交换
                     this.data[r][c]=this.data[r][nextc]
                     this.data[r][nextc]=0
@@ -197,31 +202,161 @@ var game={
                 }
             } else {
                 break
-                console.log('151')
             }
         }
     },
     // 查找同行下一个格子
     getNextInRowRight: function (r,c) {
-        for (var i = c; i <4; i++) {
-            console.log(i)
+        for (var i = c-1; i >=0; i--) {
             // 找到了就返回具体的位置
             if (this.data[r][i]!=0){
                 return i
             }
         }
         return -1 //没找到就返回一个具体位置
-    }
+    },
+
+
+    // 上移动
+    moveTop: function () {
+        // 移动之前 数组记录一次
+        // console.log(this.data.toString())
+        var before=this.data.toString()
+
+        // 移动的逻辑部分
+        // 4行 封装一个函数 循环执行4次即可
+        for (var r = 0; r < 4; r++) {
+            this.moveTopInRow(r) //函数只需要管一行就ok，通过参数的形式就可以知道执行第几行
+        }
+
+        // 移动之后 数组记录一次
+        var after=this.data.toString()
+
+        // 当移动之前的数组不等于移动之后的数组,移动了
+        if (before!=after){
+            // 1.生成一个随机数
+            this.randomNum()
+            // 2.生成完了一个随机数,游戏可能结束. 调用判断游戏是否结束的方法
+            if (this.isGameOver()){
+                this.status=this.gameOver
+            }
+            // 3.更新视频,调用更新视图的函数
+            this.dataView()
+        }
+    },
+    // 处理每一行的逻辑函数
+    moveTopInRow: function (r) {
+        // 找后面不为0的位置
+        for (var c = 0; c < 3; c++) { // 最右边的不用考虑
+            var nextc=this.getNextInRowTop(c,r)
+            if (nextc!=-1){ // 表示当前位置的后面有数字
+                console.log(this.data)
+                if (this.data[c][r]==0){ // 自己的位置为0 交换
+                    this.data[c][r]=this.data[nextc][r]
+                    this.data[nextc][r]=0
+                    c--;
+                } else if (this.data[c][r]==this.data[nextc][r]){ // 两个数相等
+                    this.data[c][r] *=2
+                    this.data[nextc][r]=0
+                    this.score+=this.data[c][r] // 加分
+                }
+            } else {
+                break
+            }
+        }
+    },
+    // 查找同行下一个格子
+    getNextInRowTop: function (c,r) {
+        for (var i = c+1; i<4 ; i++) {
+            // 找到了就返回具体的位置
+            if (this.data[i][r]!=0){
+                return i
+            }
+        }
+        return -1 //没找到就返回一个具体位置
+    },
+
+
+
+    // 下移动
+    moveDown: function () {
+        // 移动之前 数组记录一次
+        // console.log(this.data.toString())
+        var before=this.data.toString()
+
+        // 移动的逻辑部分
+        // 4行 封装一个函数 循环执行4次即可
+        for (var r = 0; r < 4; r++) {
+            this.moveDownInRow(r) //函数只需要管一行就ok，通过参数的形式就可以知道执行第几行
+        }
+
+        // 移动之后 数组记录一次
+        var after=this.data.toString()
+
+        // 当移动之前的数组不等于移动之后的数组,移动了
+        if (before!=after){
+            // 1.生成一个随机数
+            this.randomNum()
+            // 2.生成完了一个随机数,游戏可能结束. 调用判断游戏是否结束的方法
+            if (this.isGameOver()){
+                this.status=this.gameOver
+            }
+            // 3.更新视频,调用更新视图的函数
+            this.dataView()
+        }
+    },
+    // 处理每一行的逻辑函数
+    moveDownInRow: function (r) {
+        // 找后面不为0的位置
+        for (var c = 3; c > 0; c--) { // 最右边的不用考虑
+            var nextc=this.getNextInRowDown(c,r)
+            if (nextc!=-1){ // 表示当前位置的后面有数字
+                console.log(this.data)
+                if (this.data[c][r]==0){ // 自己的位置为0 交换
+                    this.data[c][r]=this.data[nextc][r]
+                    this.data[nextc][r]=0
+                    c++;
+                } else if (this.data[c][r]==this.data[nextc][r]){ // 两个数相等
+                    this.data[c][r] *=2
+                    this.data[nextc][r]=0
+                    this.score+=this.data[c][r] // 加分
+                }
+            } else {
+                break
+            }
+        }
+    },
+    // 查找同行下一个格子
+    getNextInRowDown: function (c,r) {
+        for (var i = c-1; i>=0 ; i--) {
+            // 找到了就返回具体的位置
+            if (this.data[i][r]!=0){
+                return i
+            }
+        }
+        return -1 //没找到就返回一个具体位置
+    },
 }
 
 game.start()
 
 console.log(game.data)
 
-document.onkeyup=function (e) {
+document.onkeydown=function (e) {
     // console.log(e.keyCode)
-    switch (e.keyCode) {
-        case 37:game.moveLeft();
-        case 39:game.moveRight();
-    }
+    if(event.keyCode==37)	//左
+        game.moveLeft();
+    if(event.keyCode==39)	//右
+        game.moveRight();
+    if(event.keyCode==38)	//上
+        game.moveTop();
+    if(event.keyCode==40)	//下
+        game.moveDown();
+}
+
+
+//游戏结束后重新开始
+function sta(){
+    document.getElementById("gameover").style.display="none";
+    game.start();
 }
