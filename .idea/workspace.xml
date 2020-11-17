@@ -10,36 +10,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d44a367a-26da-4acf-b142-39811ca3507f" name="默认的" comment="day05">
-      <change afterPath="$PROJECT_DIR$/day06/01.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day06/02数组.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day06/03链表.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day06/04一维数据结构算法 - 循环遍历.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day06/05一维结合算法 - 递归.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day06/06算法基础-递归.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day06/07斐波那契数列.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day06/08链表的逆置.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day06/09双链表.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day06/10数组算法.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day06/1116.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day06/1116/01.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day06/1116/02一维数据结构-数组.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day06/1116/03一维数据结构-链表.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day06/1116/04一维数据结构算法-循环遍历.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day06/1116/05一维结构算法-递归.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day06/1116/06算法基础-递归.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day06/1116/07斐波那契数列.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day06/1116/08链表的逆置.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day06/1116/09双链表.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day06/1116/10数组算法.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day06/1116/11数组算法-冒泡.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day06/1116/12数组算法-选择.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day06/1116/13数组算法-快排.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day06/1116计网4班 - 舒洪凡.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day06/11数组算法-冒泡.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day06/12数组算法-选择.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day06/13数组算法-快排.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day06/~$16计网4班 - 舒洪凡.docx" afterDir="false" />
+    <list default="true" id="d44a367a-26da-4acf-b142-39811ca3507f" name="默认的" comment="day06">
+      <change afterPath="$PROJECT_DIR$/day07/2048.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day07/2048/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day07/2048/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day07/2048/js/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day07/2048/js/js.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day07/jQuery旋转菜单.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day07/jQuery旋转菜单/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day07/jQuery旋转菜单/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day07/jQuery旋转菜单/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day07/jQuery旋转菜单/jquery.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,9 +31,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
-        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -75,17 +56,18 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/day03" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\DEMO\百里半\day02" />
-      <recent name="F:\DEMO\百里半\html" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\DEMO\百里半\day03" />
       <recent name="F:\DEMO\百里半\day03\1111" />
       <recent name="F:\DEMO\百里半\day02" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\DEMO\百里半\day02" />
+      <recent name="F:\DEMO\百里半\html" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -107,7 +89,11 @@
       <workItem from="1605229309758" duration="21883000" />
       <workItem from="1605266642441" duration="669000" />
       <workItem from="1605363518256" duration="45000" />
-      <workItem from="1605488731394" duration="21631000" />
+      <workItem from="1605488731394" duration="21821000" />
+      <workItem from="1605533827898" duration="47000" />
+      <workItem from="1605575181709" duration="9326000" />
+      <workItem from="1605590311504" duration="5631000" />
+      <workItem from="1605597840135" duration="5449000" />
     </task>
     <task id="LOCAL-00001" summary="day01">
       <created>1604936634167</created>
@@ -151,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605266685286</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="day06">
+      <created>1605516690372</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1605516690372</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,26 +169,31 @@
     <MESSAGE value="day03" />
     <MESSAGE value="day04" />
     <MESSAGE value="day05" />
-    <option name="LAST_COMMIT_MESSAGE" value="day05" />
+    <MESSAGE value="day06" />
+    <option name="LAST_COMMIT_MESSAGE" value="day06" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1605363552770">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1605533868320">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1605363552770" />
-    <state x="361" y="145" width="814" height="532" key="Vcs.Push.Dialog.v2" timestamp="1605266698090">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1605533868320" />
+    <state x="424" y="50" key="SettingsEditor" timestamp="1605578194457">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="424" y="50" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1605578194456" />
+    <state x="361" y="146" width="814" height="532" key="Vcs.Push.Dialog.v2" timestamp="1605516693039">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1605266698090" />
     <state x="2281" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1605026374705" />
-    <state x="361" y="146" width="814" height="532" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1604979231942" />
+    <state x="361" y="146" width="814" height="532" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605516693039" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1605490613424">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1605490613424" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605489363912">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605580147352">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1605489363912" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1605580147352" />
   </component>
 </project>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2048</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <p class="score01">
+        SCORE:
+        <span id="score01">0</span>
+    </p>
+    <div class="container">
+<!--        第一行-->
+        <div id="c00" class="cell n2">2</div>
+        <div id="c01" class="cell n4">4</div>
+        <div id="c02" class="cell n8">8</div>
+        <div id="c03" class="cell n16">16</div>
+<!--        第二行-->
+        <div id="c10" class="cell n32">32</div>
+        <div id="c11" class="cell n64">64</div>
+        <div id="c12" class="cell n128">128</div>
+        <div id="c13" class="cell n256">256</div>
+<!--        第三行-->
+        <div id="c20" class="cell n512">512</div>
+        <div id="c21" class="cell n1024">1024</div>
+        <div id="c22" class="cell n2048">2048</div>
+        <div id="c23" class="cell n4096">4096</div>
+<!--        第四行-->
+        <div id="c30" class="cell n8192">8192</div>
+        <div id="c31" class="cell"></div>
+        <div id="c32" class="cell"></div>
+        <div id="c33" class="cell"></div>
+    </div>
+    <div class="gameover" id="gameover">
+        <p>
+            GAME OVER!!! <br>
+            SCORE: <span id="score02">0</span> <br>
+            <a href="javaScript:;" onclick="sta()">TRYAGAIN!!!</a>
+        </p>
+    </div>
+</body>
+<script src="./js/js.js"></script>
+</html>
