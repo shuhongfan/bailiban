@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 代码实现普利姆算法
+        function Node(value){
+            this.value = value;
+            this.neighbor = [];
+        }
+        var pointSet = ["A","B","C","D","E"];
+        var max = 10000000;
+        var distance = [
+            [0,4,7,max,max],
+            [4,0,8,6,max],
+            [7,8,0,5,max],
+            [max,6,5,0,7],
+            [max,max,max,7,0]
+        ]
+        function getIndex(str){
+            for(var i = 0; i < pointSet.length;i ++){
+                if(str == pointSet[i]){
+                    return i;
+                }
+            }
+
+            return -1;
+        }
+
+
+        function getMinDisNode(pointSet,distance,nowPointSet){
+            // 定义起点和终点
+            var fromNode = null;
+            var minDisNode = null;
+
+            for(var i = 0;i < nowPointSet.length;i++){
+                var nowPointSet = getIndex(nowPointSet[i]);   //获取当前节点的索引
+                for(var j = 0;j < distance[nowPointSet].length;j++){
+                    var thisNode = pointSet[j]
+                    if(nowPointSet.indexOf(thisNode) < 0){
+                        
+                    }
+                }
+            }
+        }
+
+
+
+
+    </script>
+</body>
+</html>

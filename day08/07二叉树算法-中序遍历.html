@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Node(value) {
+        this.value=value
+        this.left=null
+        this.right=null
+    }
+    var a=new Node('a')
+    var b=new Node('b')
+    var c=new Node('c')
+    var d=new Node('d')
+    var e=new Node('e')
+    var f=new Node('f')
+    var g=new Node('g')
+
+    a.left=c
+    a.right=b
+
+    c.left=f
+    c.right=g
+
+    b.left=d
+    b.right=e
+    console.log(a,b,c)
+
+    function fun(root) {
+        if (root==null) return
+
+        fun(root.left) // 输出左边
+        console.log(root.value) //输出自己
+        fun(root.right) // 输出右边
+    }
+    fun(a)
+</script>
+</body>
+</html>

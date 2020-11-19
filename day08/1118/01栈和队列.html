@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 一维：栈和队列
+        // 栈：先入后出
+        // 相当于箱子
+
+        // 队列：先入先出
+        // 相当于管道
+
+        // 用数组去封装一个栈结构
+        function Stack(){
+            this.arr = [];
+            this.push = function(value){
+                this.arr.push(value)
+            }
+            this.pop = function(){
+                return this.arr.pop()
+            }
+        }
+        var stack = new Stack();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        console.log(stack.arr)
+        stack.pop()
+        console.log(stack.arr)
+
+        // 用数组去封装一个队列结构
+        function Queue(){
+            this.arr = [];
+            this.push = function(value){
+                this.arr.push(value)
+            }
+            this.pop = function(){
+                return this.arr.shift()
+            }
+        }
+        var queue = new Queue();
+        queue.push(1)
+        queue.push(2)
+        queue.push(3)
+        console.log(queue.arr)
+        queue.pop()
+        console.log(queue.arr)
+    </script>
+</body>
+</html>

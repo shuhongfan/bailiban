@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Node(value){
+            this.value = value;
+            this.left = null;
+            this.right = null;
+        }
+        var a = new Node("a")
+        var b = new Node("b")
+        var c = new Node("c")
+        var d = new Node("d")
+        var e = new Node("e")
+        var f = new Node("f")
+        var g = new Node("g")
+
+        a.left = c;
+        a.right = b;
+
+        c.left = f;
+        c.right = g;
+
+        b.left = d;
+        b.right = e;
+
+        // 广搜
+        function guangSearch(rootList,target){
+            if(rootList == null || rootList.length == 0){
+                return false;
+            }
+            var childList = []; //存的是当前层的所有节点，依次的传入到下一层进行搜索
+            for(var i = 0 ; i < rootList.length ; i ++){
+                // console.log(rootList[i].value)
+                // console.log(childList)
+                if(rootList[i] != null && rootList[i].value == target){
+                    return true;
+                }else{
+                    // 如果没有找到，就把左子树和右子树添加到childList中
+                    if(rootList[i].left == null || rootList[i].right == null){
+                        return false;
+                    }
+                    childList.push(rootList[i].left);
+                    childList.push(rootList[i].right);
+                }
+            }
+            return guangSearch(childList,target)
+
+        }
+        console.log( guangSearch([a] , "e") )
+
+    </script>
+</body>
+</html>

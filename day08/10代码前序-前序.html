@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var zhong=["f",'c','g','a','d','b','e']
+    var hou=['f','g','c','d','e','b','a']
+    function Node(value) {
+        this.value=value
+        this.left=null
+        this.right=null
+    }
+    function fun(zhong,hou) {
+        // 严谨性判断和出口一起写
+        if (zhong==null||hou==null||zhong.length==0||hou.length==0||zhong.length!=hou.length) return
+        // 先找根节点
+        var root=new Node(hou[hou.length-1])
+        var index=zhong.indexOf(root.value)
+
+        var leftZhong=zhong.slice(0,index);
+        var rightZhong=zhong.slice(index+1,zhong.length);
+
+
+        var leftHou=hou.slice(0,index);
+        var rightHou=hou.slice(index,hou.length-1);
+
+        root.left=fun(leftZhong,leftHou)
+        root.right=fun(rightZhong,rightHou)
+        return root;
+    }
+    var root=fun(zhong,hou)
+    console.log(root)
+
+    function funFor(root) {
+        if (root==null) return ;
+        console.log(root.value)
+        funFor(root.left)
+        funFor(root.right)
+    }
+    funFor(root)
+</script>
+</body>
+</html>

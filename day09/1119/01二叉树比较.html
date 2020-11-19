@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 遇到二叉树的比较
+        // 面试中：多问一嘴，互相交换位置算不算同一颗二叉树
+        // 笔试中：如果没有特殊说明互换以后还是同一颗树，那么默认互换以后不是同一颗树
+
+
+        function Node(value){
+            this.value = value;
+            this.left = null;
+            this.right = null;
+        }
+        var a1 = new Node("a");
+        var b1 = new Node("b");
+        var c1 = new Node("c");
+        var d1 = new Node("d");
+        var e1 = new Node("e");
+        var f1 = new Node("f");
+        var g1 = new Node("g");
+        a1.left = b1;
+        a1.right = c1;
+
+        c1.left = f1;
+        c1.right = g1;
+
+        b1.left = d1;
+        b1.right = e1;
+
+
+        var a2 = new Node("a");
+        var b2 = new Node("b");
+        var c2 = new Node("c");
+        var d2 = new Node("d");
+        var e2 = new Node("e");
+        var f2 = new Node("f");
+        var g2 = new Node("g");
+        a2.left = c2;
+        a2.right = b2;
+
+        c2.left = f2;
+        c2.right = g2;
+
+        b2.left = d2;
+        b2.right = e2;
+
+
+        // 1.二叉树如果交换位置，认为不相等
+        function compareTree(root1,root2){
+            if(root1 == root2){
+                return true;
+            }
+            if(root1 == null && root2 != null || root2 == null && root1 != null){
+                return false;
+            }
+            if(root1.value != root2.value){
+                return false;
+            }
+            var bool1 = compareTree(root1.left,root2.left)   //判断左子树
+            var bool2 = compareTree(root1.right,root2.right)  //判断右子树
+            return bool1 && bool2;    //必须左右子树完全相等
+
+        }
+        console.log( compareTree(a1,a2) )
+
+
+        // console.log(null == null)
+
+    </script>
+</body>
+</html>

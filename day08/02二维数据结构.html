@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+一维的数据结构：数组和链表
+二维的数据结构：
+    二维数组
+
+拓扑学 只关心关系 不会去关系距离
+二维拓扑结构 链表的进化
+
+-->
+<script>
+    function Node(value) {
+        this.value=value
+        this.neighbor=[]
+    }
+    var a=new Node('a')
+    var b=new Node('b')
+    var c=new Node('c')
+    var d=new Node('d')
+    var e=new Node('e')
+
+    a.neighbor.push(b)
+    a.neighbor.push(c)
+
+    b.neighbor.push(a)
+    b.neighbor.push(c)
+
+    c.neighbor.push(a)
+    c.neighbor.push(b)
+    c.neighbor.push(c)
+    c.neighbor.push(d)
+
+    d.neighbor.push(c)
+    e.neighbor.push(c)
+
+    console.log(a)
+    console.log(b)
+    console.log(c)
+    console.log(d)
+    console.log(e)
+</script>
+</body>
+</html>

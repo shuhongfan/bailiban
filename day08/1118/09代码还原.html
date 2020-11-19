@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 根据中序结果和后序结果还原二叉树并且进行前序遍历
+
+        var zhong = ["f","c","g","a","d","b","e"];
+        var hou = ["f","g","c","d","e","b","a"];
+
+        function Node(value){
+            this.value = value;
+            this.left = null;
+            this.right = null;
+        }
+        function fun(zhong,hou){
+            // 严谨性判断和出口一起写
+            if(zhong == null || hou == null || zhong.length == 0 || hou.length == 0 || zhong.length != hou.length){
+                return null
+            }
+            // 先找根节点
+            var root = new Node(hou[hou.length - 1]);
+            var index = zhong.indexOf(root.value);
+
+            var leftZhong = zhong.slice(0, index);
+            var rightZhong = zhong.slice(index + 1 , zhong.length)
+            
+
+            var leftHou = hou.slice(0 , index);
+            var rightHou = hou.slice(index , hou.length - 1);
+
+            root.left = fun(leftZhong,leftHou)
+            root.right = fun(rightZhong,rightHou)
+
+            return root;
+        }
+        var root = fun(zhong,hou);
+        console.log(root)
+
+
+        function funBian(root){
+            if(root == null){
+                return
+            };
+            console.log(root.value);   //先输出自己
+            funBian(root.left)   // 输出左边
+            funBian(root.right)   // 输出右边
+        }   
+        funBian(root)
+    </script>
+</body>
+</html>

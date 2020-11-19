@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Node(value){
+            this.value = value;
+            this.left = null;
+            this.right = null;
+        }
+        var a = new Node("a");
+        var b = new Node("b");
+        var c = new Node("c");
+        var d = new Node("d");
+        var e = new Node("e");
+        var f = new Node("f");
+        var g = new Node("g");
+
+
+        a.left = c;
+        a.right = b;
+
+        c.left = f;
+        c.right = g;
+
+        b.left = d;
+        b.right = e;
+
+        function fun(root){
+            if(root == null){
+                return
+            };
+            fun(root.left)   // 输出左边
+            fun(root.right)   // 输出右边
+            console.log(root.value);   //先输出自己
+        }   
+        fun(a)
+
+        // 题目：
+        // 1.给出二叉树，写出前序、中序、后序遍历
+        // 2.给前序和中序结果还原二叉树，写出后序
+        // 3.给后序和中序结果还原二叉树，写出前序
+    </script>
+</body>
+</html>

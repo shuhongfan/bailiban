@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container{
+            height: 100%;
+            padding: 0 200px;
+            position: relative;
+        }
+        .left,.right{
+            width: 200px;
+            min-height: 200px;
+            background-color: lightblue;
+        }
+        .center{
+            width: 100%;
+            min-height: 400px;
+            background-color: linen;
+        }
+        .left,.right.center{
+            float: left;
+        }
+        .left{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-color: red;
+        }
+        .right{
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<div class="container clearfix">
+    <div class="center"></div>
+    <div class="left"></div>
+    <div class="right"></div>
+</div>
+</body>
+</html>
