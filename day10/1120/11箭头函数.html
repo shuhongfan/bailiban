@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 箭头函数   ES6中新增的
+        // 1.如果对象直接调用，this指向该对象
+        // 2.如果函数直接调用，this指向window
+        // 3.new调用函数，this指向新创建的实例对象
+        // 4.apply,call,bind(ES5)可以改变this的指向
+        // 5.dom事件函数，this指向dom对象
+
+        // 箭头函数
+        // 箭头函数中是没有this的，如果使用了this，this跟 外层的非箭头函数的this指向相同
+        // 箭头函数中是没有arguments的，跟this情况相同
+        // target
+
+        // 箭头函数是没有原型的，箭头函数的内存占用非常小
+        // 箭头函数不能写成构造函数
+
+        var obj = {
+            count : 0,
+            start : function(){
+                setInterval(() => {
+                    this.count ++;
+                    console.log(this.count);
+                },1000)
+            },
+            regEvent : function(){
+                window.onclick = () => {
+                    console.log(this.count);
+                }
+            }
+        }
+
+        // obj.start()
+        obj.regEvent()
+    </script>
+</body>
+</html>

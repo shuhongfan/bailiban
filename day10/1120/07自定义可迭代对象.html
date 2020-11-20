@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // forof循环就是基于迭代协议
+        // 自定义对象是不能使用forof循环
+        // 自定义对象不含迭代协议
+        // 自定义对象如果添加迭代协议，自定义对象能否使用forof循环
+
+
+        var obj = {
+            a : 1,
+            b : 2,
+            [Symbol.iterator] : function(){
+                var keys = Object.keys(this);
+                var i = 0;
+                return {
+                    next :()  => {
+                        var propName = keys[i];
+                        var propValue = this[propName];
+                        var result = {
+                            value : {
+                                propName : propName,
+                                propValue : propValue
+                            },
+                            done : i >= keys.length
+                        }
+                        i ++;
+                        return result;
+                    }
+                }
+            }
+        }
+        // console.log(Object.keys(obj))
+        for(var item of obj){
+            console.log(item)
+        }
+    </script>
+</body>
+</html>

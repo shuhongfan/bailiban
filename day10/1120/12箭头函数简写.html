@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.只有一个参数的时候,可以省略小括号的
+        // var fun = num => {
+        //     console.log("接受的参数" , num)
+        // }
+        // fun(10)
+
+        // 2.如果箭头只有一条语句，并且这个语句为return，可以省略花括号和return关键字
+        // var isOdd = function(num){
+        //     return num % 2 !== 0;
+        // }
+        // var isOdd = num => num % 2 !== 0
+        // console.log(isOdd(11))
+
+        // 特殊情况，当return为一个对象的时候
+        var fun = (a,b) => ({
+                a : a,
+                b : b
+            })
+        
+        console.log(fun(10,20))
+    </script>
+</body>
+</html>

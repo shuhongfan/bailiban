@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+自定义对象是不能使用forof循环
+自定义对象不含迭代协议
+自定义对象如果添加携带协议，自定义对象是否能使用forof循环
+
+-->
+<script>
+    var obj={
+        a: 1,
+        b: 2,
+        [Symbol.iterator] () {
+            var keys=Object.keys(this)
+            var i=0
+            return {
+                next:()=>{
+                    var propName=keys[i]
+                    var propValue=this[propName]
+
+                    var result={
+                        value:{
+                            propName,
+                            propValue
+                        },
+                        done: i>=keys.length
+                    }
+                    i++
+                    return result
+                }
+            }
+        }
+    }
+    console.log(obj)
+    for (let item of obj) {
+        console.log(item)
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 菲波那切数列
+        // 1 1 2 3 5 8 13... 
+
+
+        function createFeiboIterator(){
+            var prev1 = 1;
+            var prev2 = 1;
+            var n = 1;
+            return {
+                next : function(){
+                    var value;
+                    if(n <= 2){
+                        value = 1;
+                    }else{
+                        value = prev1 + prev2;
+                    }
+                    var result = {
+                        value : value,
+                        done : false
+                    }
+                    prev2 = prev1;
+                    prev1 = result.value;
+                    n++
+                    return result;
+                }
+            }
+        }
+
+        var iter = createFeiboIterator();
+    </script>
+</body>
+</html>

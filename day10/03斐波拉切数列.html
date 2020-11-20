@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function createFeiboIterator() {
+        var prev1=1
+        var prev2=1
+        var n=1
+        return {
+            next: function () {
+                var value
+                if (n<=2) value=1
+                else value=prev1+prev2
+
+                var result={
+                    value,
+                    done: false
+                }
+
+                prev2=prev1
+                prev1=result.value
+                n++
+                return result
+            }
+        }
+    }
+    var iter=createFeiboIterator()
+    for (var i = 0; i < 5; i++) {
+        console.log(iter.next())
+    }
+</script>
+</body>
+</html>

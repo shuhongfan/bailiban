@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+箭头函数
+1.如果对象直接调用，this执行该对象
+2.如果函数直接调用，this指向windows
+3.new调用函数，this指向新创建的实例对象
+4.apply，cell，bind（5）可以改变新创建的实例对象
+5.dom事件函数，this指向dom对象
+箭头函数中没有this，如果使用this，this跟外层的非箭头
+
+箭头函数是没有原型的，箭头函数的内存占用非常小
+-->
+<script>
+    var obj={
+        const:0,
+        start(){
+            setTimeout(function () {
+                this.count++
+                console.log(this.count())
+            },100)
+        },
+        regEvent(){
+            window.onclick=()=>{
+                console.log(this.count)
+            }
+        }
+    }
+</script>
+</body>
+</html>

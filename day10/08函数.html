@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+1.构造函数是与普通函数的区别
+    认为约定的基础之上
+    构造函数首字母大写
+    构造函数只能给new调用
+
+-->
+<script>
+    function Person(firstName,lastName) {
+        if (!(this instanceof Person)){
+            if (new.target){
+                throw new Error('Person是')
+            }
+        }
+        this.firstName=firstName
+        this.lastName=lastName
+        this.fullName=`${firstName}--${lastName}`
+    }
+    var p1=new Person('张','三')
+    console.log(p1)
+    var p2=Person('李','四')
+    console.log(p2)
+</script>
+</body>
+</html>

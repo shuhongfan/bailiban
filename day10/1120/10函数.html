@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.构造函数与普通函数的区别
+            // 人为约定的基础之上的
+            // 1.构造函数首字母大写
+            // 2.构造函数只能给new调用
+
+        function Person(firstName,lastName){
+            // if(!(this instanceof Person)){
+            //     throw new Error("Person是构造函数，必须使用new执行")
+            // }
+
+            // console.log(new.target)
+            if(new.target === undefined){
+                throw new Error("Person是构造函数，必须使用new执行")
+            }
+
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.fullName = `${firstName}${lastName}`
+        }
+        var p1 = new Person("柯","博文");
+        console.log(p1)
+        var p2 = Person("柯","博文");   //不去用new调用，可以执行，但是this指向window
+        console.log(p2)
+
+        // 构造必须使用new关键字执行
+    </script>
+</body>
+</html>

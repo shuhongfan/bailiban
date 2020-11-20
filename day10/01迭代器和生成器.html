@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+1.什么是迭代
+从一个数据集合中按照一定的顺序，不断的去取出数据
+
+2迭代和遍历有什么区别
+迭代：顺序，不能确定有多少数据，迭代是不能保证什么时候把数据给全部取完
+项目迭代
+
+3.迭代器
+就是一个对象，对迭代的过程进行的一个封装
+
+4.迭代模式
+设计模式的一种
+1.迭代器具有获取下一个数据的能力
+2.判断下一个是否有无数据的能力
+-->
+</body>
+<script>
+    // 在ES规定中，如果一个对象有next方法，并且该方法返回一个对象
+    var obj={
+        next: function () {
+            return{
+                value:sdbhsfjsd,
+                down:'dsfds/'
+            }
+        }
+    }
+
+    // 只要对象有这个next方法，就认为这个对象为迭代器
+    // next方法： 获取下一个数据
+    // value：下一个数据的值
+    // done:表示迭代是否完成
+
+    var arr=[1,2,3,4,5]
+    var iterator={
+        i:0,
+        result:'',
+        next:function () {
+            var result={
+                value:arr[this.i],
+                done: this.i >= arr.length
+            }
+            this.i ++
+            return result
+        }
+    }
+    // console.log(iterator.next())
+    // console.log(iterator.next())
+    // console.log(iterator.next())
+    // console.log(iterator.next())
+    // console.log(iterator.next())
+    // console.log(iterator.next())
+
+    var data=iterator.next()
+
+    while (!data.done){
+        console.log(data.value)
+        data=iterator.next()
+    }
+    console.log('迭代完成')
+</script>
+</html>
+

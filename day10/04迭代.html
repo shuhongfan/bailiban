@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+<div>6</div>
+<div>7</div>
+<div>8</div>
+<div>9</div>
+<div>10</div>
+<!--
+迭代器：
+可迭代协议
+如果一个引用类型，有迭代属性 (Symbol(Symbol.iterator)),可以使用forof进行遍历
+认为这个引用类型为可迭代对象
+
+-->
+<script>
+    var arr=[1,2,3,4,5]
+    console.log(arr)
+    console.log(arr[Symbol.iterator])
+
+
+    var iterator=arr[Symbol.iterator]()
+    // while (!iterator.done){
+    //     console.log(iterator.next())
+    // }
+
+
+    var divs=document.getElementsByTagName('div')
+    console.log(divs)
+    var iterator=divs[Symbol.iterator]()
+    for (var item of divs) {
+        console.log(item)
+    }
+
+    var result=iterator.next()
+    while (!result.done){
+        console.log(result.value)
+        result=iterator.next()
+    }
+</script>
+</body>
+</html>
