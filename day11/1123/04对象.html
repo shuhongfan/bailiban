@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.可以写成计算属性的,属性名是不确定的时候
+        // const name1 = "name";
+        // const printName = "print"
+        // class Person{
+        //     constructor(name,age){
+        //         this[name1] = name;   //这个属性名是不确定，要根据后台的返回数据才能确定
+        //         this.age = age;
+        //     }
+        //     [printName](){
+        //         console.log(this[name1]);
+        //         console.log(this.age)
+        //     }
+        // }
+        // var p2 = new Person("jack",20);
+        // p2[printName]()
+        // console.log(p2)
+        // console.log(p2[name1])
+
+        // 2.可以去写getter和setter    VUE中全部对属性做了判断
+        // const name1 = "name";
+        // const printName = "print"
+        // class Person{
+        //     constructor(name,age){
+        //         this[name1] = name;  
+        //         this.age = age;
+        //     }
+        //     // 爆栈了   无限递归了
+        //     get age(){
+        //         return this._age + "岁";
+        //     }
+        //     set age(age){
+        //         if(typeof(age) != "number"){
+        //             throw new TypeError("age property must be a number!");
+        //         }
+        //         if(age > 200){
+        //             age = 200
+        //         }else if(age < 0){
+        //             age = 0
+        //         }
+        //         this._age = age
+        //     }
+        //     [printName](){
+        //         console.log(this[name1]);
+        //         console.log(this.age)
+        //     }
+        // }
+        // var p1 = new Person("jack",20);
+        // // var p2 = new Person("jack","adshfksjd")
+        // var p3 = new Person("柯博文",10000)
+
+        // 3.把函数当成对象使用,函数的静态属性
+        // function fun(){
+
+        // }
+        // fun.abc = 21324654;
+        // console.log(fun.name)
+        // console.log(fun.abc)
+        // console.dir(fun)
+
+        const name1 = "name";
+        const printName = "print"
+        class Person{
+            constructor(name,age){
+                this[name1] = name;  
+                this.age = age;
+            }
+            [printName](){
+                console.log(this[name1]);
+                console.log(this.age)
+            }
+        }
+        Person.abc = 32416654;
+        // console.dir(Person)
+        var p2 = new Person("jack",20);
+        // console.log(p2)
+
+        class Chess{
+            constructor(name){
+                this.name = name;
+                this.width = width;
+                this.height = height;
+            }
+
+            // 静态成员
+            static width = 50;
+            static height = 50;
+            static test(){
+
+            }
+        }
+        console.dir(Chess)
+        console.log(Chess.width)
+
+        // 4.所有的类全都是表达式
+
+        const Abc = class {
+            
+        }
+
+
+    </script>
+</body>
+</html>

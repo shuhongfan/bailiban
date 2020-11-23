@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function sum(a,...arg) {
+        // 做参数收集的时候，收集运算符，如果有，必须在形参的最后一位
+        console.log(arguments)
+        console.log(arg)
+    }
+    sum(1,2,3,4,5)
+
+    // 1.计算平均数
+    function a(...num) {
+        let sum=0
+        for (var numKey in num) {
+            console.log(num[numKey])
+            sum+=num[numKey]
+        }
+        console.log(sum)
+        return sum / num.length
+    }
+
+    console.log(a(90,99,80,85,91,81,60,88,66,77,35))
+
+    // 去掉最高分和最低分 再计算平均
+    function b(...arg) {
+        arg.sort((a,b)=>{
+            return a-b
+        })
+        arg.pop()
+        arg.shift()
+        // return a(...arg)
+        return a.apply(this,arg)
+    }
+    console.log(b(90,99,80,85,91,81,60,88,66,77,35,1000))
+
+
+    // 展开
+    let arr=[1,2,3]
+    console.log(...arr)
+
+    let arr1=[1,2,3]
+    let arr2=[5,6,7]
+    let newArr=[...arr1,...arr2]
+    console.log(arr1.concat(arr2))
+    console.log(newArr)
+
+    // 克隆
+    // 深克隆：里面所有的引用值的引用空间全部不相等
+    // 浅克隆里面的引用值相等的就为浅克隆
+    var arr3=[1,2,3]
+    var arr4=[...arr3]
+    arr3.push(4)
+    console.log(arr3,arr4,arr3===arr4) // 引用值比较地址
+
+    // 浅克隆
+    var arr5=[1,2,3,{name:'jack'}]
+    var arr6=[...arr5]
+    arr5[3].name='hello'
+    console.log(arr5,arr6,arr5===arr6,arr5.name===arr6.name)
+
+    // 深克隆  但是有缺陷 有些引用值不能完成
+    var arr7=[1,2,3,{name:'jack'},new Date()]
+    var arr8=JSON.parse(JSON.stringify(arr7))
+    console.log(arr7,arr8,arr7===arr8,arr7[3]===arr8[3])
+    console.log(arr7[4].getHours())
+    // console.log(arr8[4].getHours())
+
+
+    // 展开和搜集运算符在ES6中只能用在数组里面
+    // 展开和收集运算符在对象中 ES7中扩展的
+    // 用在对象中也是可以完成浅克隆
+    var obj1={
+        name: 'shf',
+        age: 18,
+        hobby:['badminton', 'Basketball']
+    }
+    var obj2={...obj1}
+    obj1.hobby.push('Tennis')
+    console.log(obj1,obj2,obj1===obj2)
+</script>
+</body>
+</html>

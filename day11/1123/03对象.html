@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 在JavaScript当中，只有构造函数，既是类也是构造函数
+
+        // 构造函数
+        // 类
+        // function Person(name,age){
+        //     this.name = name;
+        //     this.age = age;
+            
+        // }
+        // Person.prototype.print = function(){
+        //     console.log(this.name);
+        //     console.log(this.age);
+        // }
+        // var p1 = new Person("jack",18);
+        // console.log(p1)
+        
+        // ES6之前的构造函数存在的问题
+        // 1.类和构造是写在一起，导致代码非常混乱
+        // 2.原型方法和属性完全分离，降低了代码的可读性
+        // 3.原型成员可以被枚举出来
+        // for(var prop in p1){
+        //     console.log(prop)
+        // }
+        // 4.构造函数如果没有严谨性判断，构造函数可以当成普通函数来使用
+
+        // ES6中新增的一个关键字
+        class Person{
+            constructor(name,age){
+                this.name = name;
+                this.age = age;
+            }
+            print(){
+                console.log(this.name);
+                console.log(this.age)
+            }
+        }
+        var p2 = new Person("jack",20);
+        console.log(p2)
+
+        // for(var prop in p2){    //原型方法是不能被枚举的
+        //     console.log(prop)
+        // }
+
+        // p2.print()
+        
+        // 1.类中所有方法都没有办法当成构造函数进行使用的
+        // console.log(new this.print())   error
+
+        // 2.class声明的类必须使用new关键字进行调用
+        // var p3 = Person("jack",20);
+
+        // 3.类中的所有方法都是不能被枚举的
+
+        // 4.跟let和const的新增区别完全相同
+        // 5.类中所有的代码全部都是在严格模式下执行的
+    </script>
+</body>
+</html>

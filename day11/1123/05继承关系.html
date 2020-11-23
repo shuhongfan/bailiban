@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ES6类的继承关系
+
+        // 如果有两个类A和B，如果描述为B是A，A和B形成继承关系
+
+        // 男人  和   人
+        // 女人  和   人
+
+        // 狗 和 动物
+        // 如果B是A：
+        // 1.B继承自A
+        // 2.A派生B
+        // 3.B是A的子类
+        // 4.A是B的父类
+
+
+        // ES6中的继承
+        // extends
+        // super
+
+        class Animal{
+            constructor(type,name,age,sex){
+                this.type = type;
+                this.name = name;
+                this.age = age;
+                this.sex = sex;
+            }
+            print(){
+                console.log(`种类：${this.type}`);
+                console.log(`名字：${this.name}`)
+                console.log(`年龄：${this.age}`)
+                console.log(`性别：${this.sex}`)
+            }
+            say(){
+                throw new Error("啥动物都不知道")
+            }
+        }
+        class Dog extends Animal{
+            // ES6规定,如果定义了constructor，并且该类是子类，就必须在第一行手动调用父类的构造
+            // 如果不写，则和父类的构造保持一致
+            constructor(name,age,sex){
+                // 1.
+                super('犬类',name,age,sex);
+
+                this.loves = "啃骨头"
+            }
+            print(){
+                // 2.super当成对象使用，表示父类的原型
+                super.print();
+
+                console.log(`爱好：${this.loves}`)
+            }
+            say(){   //如果相同，会产生覆盖父类
+                console.log("旺旺")
+            }
+
+        }
+        // const dog = new Dog('犬类','旺财',5,'公');
+        const dog = new Dog('旺财',5,'公');
+        console.log(dog)
+        dog.print()
+        dog.say()
+
+    </script>
+</body>
+</html>

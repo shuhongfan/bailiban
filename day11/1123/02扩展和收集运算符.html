@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ...
+        // 收集
+        // function sum(a,...arg,b){
+        //     // 做参数收集的时候，收集运算符，如果有，必须在形参的最后一位
+        //     // console.log(a + b + c + d + e)
+        //     // console.log(arguments)
+
+        //     console.log(arg)
+
+        // }  
+        // sum(1,2,3,4,5)
+
+        // 1.计算平均数
+        // function a(...arr){
+        //     let sum = 0;
+        //     arr.forEach(function(ele){
+        //         sum += ele;
+        //     })
+        //     return sum / arr.length;
+        // }
+        // // console.log(a(90,99,80,85,81,60,87,93));
+        // // 去掉最高分和最低分，再计算平均
+        // function b(...arg){
+        //     arg.sort(function (a,b){
+        //         return a - b;
+        //     });
+        //     arg.pop();
+        //     arg.shift()
+        //     // return a(...arg)   //读的操作
+        //     return a.apply(this,arg)
+        // }
+        // console.log(b(90,99,80,85,81,60,87,93));
+
+
+
+        // 展开   读
+        // let arr = [1,2,3];
+        // console.log(...arr);
+        
+
+        // let arr1 = [1,2,3];
+        // let arr2 = [5,6,7];
+        // let newArr = [...arr1,...arr2];
+        // console.log(newArr)
+
+        // 克隆
+        // 深克隆（笔试中经常要求写深克隆代码）里面所有的引用值的引用空间全部不想等
+        // 浅克隆  里面有引用值相等的就为浅克隆
+
+        // 克隆   浅层的克隆
+        // var arr1 = [1,2,3];
+        // var arr2 = [...arr1];
+        // arr1.push(4)
+        // console.log(arr1)
+        // console.log(arr2)
+
+
+
+        // var arr1 = [1,2,3,{name : "jack"}];
+        // var arr2 = [...arr1];
+        // console.log(arr1 == arr2)
+        // console.log(arr1)
+        // console.log(arr2)
+        // arr1[3].name = "hello";
+        // console.log(arr1)
+        // console.log(arr2)
+        // console.log(arr1[3] == arr2[3])
+
+
+        var arr1 = [1,2,3,{name : "jack"},new Date()];
+        var arr2 = JSON.parse(JSON.stringify(arr1))   //可以完成深克隆，但是有缺陷，有的引用值不能完成
+        // console.log(JSON.parse(JSON.stringify(arr1)))
+        console.log(arr1)
+        console.log(arr2)
+        console.log(arr1 == arr2)
+        console.log(arr1[3] == arr2[3])
+        console.log(arr1[4].getHours())
+        console.log(arr2[4].getHours())
+
+
+        // 展开和收集运算符在ES6中只能用在数组里面
+
+
+
+
+
+        // 展开和收集运算符用在对象中，这个是ES7中扩展的
+        // 用在对象中也是可以完成浅克隆
+    </script>
+</body>
+</html>

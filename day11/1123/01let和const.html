@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>0</button>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+
+    <script>
+        // let解决循环绑定点击事件的问题
+        // var btns = document.getElementsByTagName("button");
+        // // for(var i = 0; i < btns.length;i++){
+        // //     (function(i){
+        // //         btns[i].onclick = function(){
+        // //             console.log(i)
+        // //         }
+        // //     })(i)
+        // // }
+        // for(let i = 0;i < btns.length;i++){
+        //     btns[i].onclick = function(){
+        //         console.log(i)
+        //     }
+        // }
+
+
+        // let 和 const
+        // let ES6中新增的声明变量
+        // const ES6中新增的声明常量
+
+        // var
+        // 1.变量声明提升
+        // 2.可重复声明
+        // 3.全部会挂载在window
+
+        // let  使JavaScript像别的服务端的语言一样更加严谨
+        // 1.let不能重复声明
+        // 2.不会挂载到window中
+        // 3.let会产生一个块级作用域，{}块级
+        //     if for ...
+        // 4.let没有声明提升,任何语言都是没有的,会形成临时性死区
+
+
+        // 全局作用域
+        // 函数作用域
+        // ES6中新增的块级作用域{}，必须配合let进行使用
+A
+        // 临时性死区
+        // let a = 10;
+        // {
+        //     console.log(a);
+        //     let a = 100;
+        // }
+
+
+
+
+
+        // const
+        // 所有的let特征都包含
+        // const 声明和赋值必须一次性完成
+        // const PI = 100;
+        // console.log(PI)
+
+        // ES5/ES3.1  进行代码迁移，迁移成ES6的版本
+        // 能使用const的就使用const，不能使用const在去使用let
+
+
+
+        var arr = [];
+        for(var i = 0; i < 10;i++){
+            (function(i){
+                arr[i] = function(){
+                    console.log(i)
+                }
+            })(i)
+        }
+        for(var j = 0;j < 10;j++){
+            arr[j]()
+        }
+        console.log(i)
+        // 10个 10 + undefined
+        // 11个10
+        // 问：控制台有什么？如何改动代码，让其输出0123456....
+
+    </script>
+</body>
+</html>

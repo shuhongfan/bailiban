@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 写成计算属性 属性名是不确定的值
+    const name1='name'
+    const printName='print'
+    class Person{
+        constructor(name,age) {
+            this[name1]=name // 属性名是不确定的，要根据后台的返回数据才能确定
+            this.age=age
+        }
+        print(){
+            console.log(this[name1])
+            console.log(this.age)
+        }
+        [printName](){
+            console.log(this[name1])
+            console.log(this.age)
+        }
+        // 爆栈 无限递归
+        get age(){
+            if (typeof(age)!="number"){
+                throw new TypeError("age property must be a number")
+            }
+            if (age>200) age=200
+            return this._age+'岁'
+        }
+        set age(age){
+            if (typeof age !=="mu")
+            this._age=age
+        }
+    }
+
+    Person.abc=543454
+    console.dir(Person)
+
+
+    var p2=new Person('jack',3000)
+
+    console.log(p2[printName])
+
+    console.log(p2)
+
+    console.log(p2._age)
+
+
+</script>
+</body>
+</html>

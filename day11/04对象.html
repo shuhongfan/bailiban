@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<script>
+  function Person(name,age) {
+    this.name=name
+    this.age=age
+    this.say=function () {
+
+    }
+  }
+
+  Person.prototype.print=function () {
+    console.log(this.name)
+    console.log(this.age)
+  }
+
+  var p1=new Person('jack',18)
+  console.log(p1)
+
+  for (var prop in p1) {
+    console.log(prop)
+  }
+  // ES6之前的构造函数存在的问题
+  // 1.类和构造写在一起，导致代码混乱
+  // 2.原型方法和属性完全分离，降低离开代码的复用性
+  // 3.原型成员可以被枚举出来
+  // 4.构造函数如果没有严谨性判断，构造函数可以当成普通函数来使用
+
+  class Proson1{
+    constructor(name,age) {
+      this.name=name
+      this.age=age
+    }
+    print(){
+      console.log(this.name)
+      console.log(this.age)
+    }
+  }
+
+  // 1.类中所有方法都没有办法撑构造函数
+  console.log(new this.print())
+
+</script>
+</body>
+</html>

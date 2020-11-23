@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>深克隆</title>
+</head>
+<body>
+<script>
+    // function deepClone(o) {
+    //     // 判断是否为引用类型
+    //     if (typeof o === 'string' || typeof o === 'number' || typeof o === 'boolean' || typeof o === 'undefined'){
+    //         // 是引用类型直接返回
+    //         return o
+    //     } else if (Array.isArray(o)){ // 判断是否为数组，如果是创建并赋值一个新数组
+    //         let arr=[]
+    //         o.forEach(item=>{
+    //             arr.push(item)
+    //             // console.log(item)
+    //         })
+    //         return arr
+    //     } else if (typeof o === 'object'){ // 判断是否为对象
+    //         let newO={}
+    //         for (let oKey in o) {
+    //             newO[oKey]=deepClone(o[oKey])
+    //             // console.log(o[oKey])
+    //         }
+    //         return newO
+    //     }
+    // }
+
+    function deepClone(obj) {
+        // 先检测是不是数组和Object
+        // let isArr = Object.prototype.toString.call(obj) === '[object Array]';
+        let isArr = Array.isArray(obj);
+        let isJson = Object.prototype.toString.call(obj) === '[object Object]';
+        if (isArr) {
+            // 克隆数组
+            let newObj = [];
+            for (let i = 0; i < obj.length; i++) {
+                newObj[i] = deepClone(obj[i]);
+            }
+            return newObj;
+        } else if (isJson) {
+            // 克隆Object
+            let newObj = {};
+            for (let i in obj) {
+                newObj[i] = deepClone(obj[i]);
+            }
+            return newObj;
+        }
+        // 不是引用类型直接返回
+        return obj;
+    }
+
+    // 数组浅拷贝
+    var arr1=[1,2,3,{name:'shf', age:22}]
+    var arr2=[...arr1]
+    arr1[3].name='zhangsan'
+    console.log('数组浅拷贝',arr1,arr2,arr1===arr2,arr1.name===arr2.name)
+
+    // 数组深拷贝
+    var arr3=[1,2,3,{name:'shf', age:22}]
+    var arr4=deepClone(arr3)
+    arr3[3].name='hahahaha'
+    console.log('数组深拷贝',arr3,arr4,arr3===arr4,arr3.name===arr4.name)
+
+
+
+    // 对象浅拷贝
+    var obj1={
+        name: 'shf',
+        age: 18,
+        hobby:['badminton', 'Basketball']
+    }
+    var obj2={...obj1}
+    obj1.hobby.push('Tennis')
+    console.log('对象浅拷贝',obj1,obj2,obj1===obj2)
+    // 对象深拷贝
+    var obj3={
+        name:'shf',
+        age:18,
+        hobby:['badminton', 'Basketball']
+    }
+    var obj4=deepClone(obj3)
+    obj3.hobby.push('Tennis')
+    console.log('对象深拷贝',obj3,obj4,obj3===obj4)
+</script>
+</body>
+</html>

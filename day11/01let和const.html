@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<button>0</button>
+<button>1</button>
+<button>2</button>
+<button>3</button>
+<button>4</button>
+<button>5</button>
+<!--
+let和const
+let ES6中新增的声明变量
+const es6中新增的声明常量
+
+var
+1.变量声明提升
+2.可重复声明
+3.全部挂载在window
+
+let 是JavaScript像别的服务端的语言一样更加严谨
+1.let不能重复声明
+2.不会挂载到window中
+3.let会产生一个块级作用域，{}块级
+4.let没有声明提升,任何语言都是没有的，临时性的死区
+
+全局作用域
+函数作用域
+ES6中新增的块级作用域{}，必须配合let使用
+
+const
+所有let特征都包含
+const声明和赋值必须一次性完成
+能使用const的就使用const，不能使用const再去使用let
+-->
+<script>
+  let num=100
+  {
+    console.log(num)
+  }
+  // 临时性死区
+  // let a=10
+  // {
+  //   console.log(a)
+  //   let a=100
+  // }
+
+  var btns=document.getElementsByTagName('button')
+  for (var i = 0; i < btns.length; i++) {
+    (function (i){
+      btns[i].onclick=function () {
+        console.log(i)
+      }
+    })(i)
+  }
+
+
+
+  const PI={}
+  PI.name=20
+  // PI=123
+  console.log(PI)
+
+  var arr=[]
+  for (var i = 0; i < 10; i++) {
+    (function (i) {
+      arr[i]=function () {
+        console.log(i)
+      }
+    })(i)
+  }
+  for (var j = 0; j < 10; j++) {
+    arr[j]()
+  }
+  console.log(i)
+</script>
+</body>
+</html>
