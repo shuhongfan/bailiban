@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const syb1 = Symbol();   //创建了一个符号
+        // const syb2 = Symbol("abc");
+        // console.log(syb1)
+        // console.log(syb2)
+
+        // 特征：
+        // 1.没有字面量，创建方式只有这一种
+        // 对象字面量，数组字面量，正则字面量
+
+        // 2.ES6中新增了typeof返回值为symbol，ES6以前typeof返回6种，现在返回7种
+        // 面试的时候，如果没有提到ES6，就认为是6种就OK
+        // const syb1 = Symbol();  
+        // const syb2 = Symbol("abc");
+        // console.log(typeof syb1)
+        // console.log(typeof syb2)
+
+        // 3.所有的符号类型不可能相等，不管里面的描述是否相同
+        // const syb1 = Symbol("hello");
+        // const syb2 = Symbol("hello");
+        // console.log(syb1,syb2)
+        // console.log(syb1 === syb2)
+
+        // 4.符号可以当成对象的属性来进行使用，这种属性就叫符号属性
+        // const syb1 = Symbol("这个是用做对象的属性");
+        // const obj = {
+        //     a : 1,
+        //     b : 2,
+        //     [syb1] : 3
+        // }
+        // console.log(obj)
+        // console.log(obj[syb1])
+
+        
+        // 5.符号属性的通过一些特殊方式进行设计以后，就成了内部变量，不允许被外界访问
+        // const hero = (function(){
+        //     const getRandom = Symbol()
+        //     return {
+        //         hp : 500,
+        //         attack : 50,
+        //         defence : 20,
+        //         gongji : function(){
+        //             // 攻击力 * 随机数(0.8-1.2)
+        //             const gjl = this.attack * this.getRandom(0.8,1.1);
+        //             console.log(gjl)
+        //         },
+        //         [getRandom] : function(min,max){    //这个方法拿到外面去是没有任何意义
+        //             //这个方法既然没有意义，那就干脆不要让外面可以使用，甚至说不要知道这个方法都行
+        //             return Math.random() * (max - min) + min;
+        //         }
+        //     }
+        // })()
+        // // console.log(hero)
+        // console.log(hero[getRandom](0.8,1.1))
+        // 作业
+        // 1.改写成类的方式
+
+
+
+        // 6.符号属性不能被枚举
+        // const syb1 = Symbol("这个是用做对象的属性");
+        // const obj = {
+        //     a : 1,
+        //     b : 2,
+        //     [syb1] : 3
+        // }
+        // for(var prop in obj){
+        //     console.log(prop)
+        // }
+
+        // 7.符号属性的隐式转换问题
+
+        var obj = {};
+        // console.log(obj - true)
+        const syb = Symbol();   //没有toString方法的，所以限制了symbol
+        // console.log(syb + true)
+        alert(syb)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul id="container"></ul>
+    <button id="btn">点击</button>
+    <script>
+        let count = 1
+        const ul=document.getElementById('container')
+        document.getElementById('btn').onclick=function A () {
+            console.log('aaa')
+            setTimeout(function C () {
+                console.log('添加了li')
+            })
+            const li=document.createElement('li')
+            li.innerHTML=count++
+            ul.appendChild(li)
+        }
+        const observer=new MutationObserver(function B () {
+            console.log('ul发生变化')
+        })
+        console.log('bbb')
+        observer.observe(ul,{
+            attributes:true,
+            childList:true,
+            subtree:true
+        })
+    </script>
+</body>
+</html>

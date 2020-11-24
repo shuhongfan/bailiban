@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const syb1=Symbol.for('hello')
+    const syb2=Symbol.for('hello')
+
+    console.log(syb1)
+
+    const syb=Symbol()
+    const obj={
+        a:1,
+        b:2,
+        [Symbol.for('c')]:3
+    }
+    console.log(obj[Symbol.for('c')])
+</script>
+</body>
+</html>

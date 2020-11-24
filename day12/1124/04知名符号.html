@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // https://blog.csdn.net/weixin_45048106/article/details/104085805
+        // 1.Symbol.hasInstance(静态方法，就是把函数当成对象来进行使用)就是instanceof底层源代码
+        // obj instanceof A
+
+        // function A(){}
+        
+        // // console.log(obj instanceof A);
+        // // console.log(A[Symbol.hasInstance](obj))
+
+
+        // // ES5中新增的配置对象的方法defineProperty
+        // Object.defineProperty(A, Symbol.hasInstance, {
+        //     value: function(obj) {
+        //         return false;
+        //     }
+        // })
+        // var obj = new A();
+        // console.log(obj instanceof A);      
+        // console.log(A[Symbol.hasInstance](obj));    
+
+        // 2.Symbol.isConcatSpreadable    可以改变数组的concat配置项
+        // const arr = [3];
+        // const arr2 = [5, 6, 7, 8];
+
+        // arr2[Symbol.isConcatSpreadable] = false;
+
+        // const result = arr.concat(3);
+        // const result1 = arr.concat(56, arr2);
+
+        // console.log(result);
+        // console.log(result1); 
+
+        // 可以去影响对象的   
+        
+        // 3.Symbol.toPrimitive    会隐式影响类型转换的结果
+        // const obj = {
+        //     a: 1,
+        //     b: 2
+        // }
+        // obj[Symbol.toPrimitive] = function() {
+        //     return 100;
+        // }
+        // console.log(obj.valueOf());
+        // console.log(obj.toString()); 
+        // console.log(obj + 123); 
+        // console.log(obj * 123)
+
+        // 4.Symbol.toStringTag   会影响Object.prototype.toString()
+
+        class A{
+            [Symbol.toStringTag] = "hello world"
+        }
+        var obj = new A();
+        var arr = [1,2,3,4];
+        console.log(obj)
+        console.log(obj.toString())
+        console.log(arr.toString())
+        console.log(Object.prototype.toString.call(obj))
+
+
+    </script>
+</body>
+</html>

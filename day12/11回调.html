@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function biaobai(jiaren,callback) {
+        console.log(`${jiaren}`)
+        setTimeout(()=>{
+            if (Math.random()<0.1){
+                callback(true)
+            } else {
+                callback(false)
+            }
+        },1000)
+    }
+    biaobai('女神1',function (result) {
+        if (result){
+            console.log('女神1答应了')
+        } else {
+            console.log('女神1拒绝了')
+            biaobai('女神2',function (result) {
+                if (result){
+                    console.log('女神2答应了')
+                } else {
+                    console.log('女神2舒舒舒拒绝了')
+                }
+            })
+        }
+    })
+</script>
+</body>
+</html>

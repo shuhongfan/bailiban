@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const syb1 = Symbol.for("hello");
+        const syb2 = Symbol.for("hello");
+        // console.log(syb1,syb2)
+        // console.log(syb1 === syb2)
+
+        const syb = Symbol()
+        const obj = {
+            a : 1,
+            b : 2,
+            [Symbol.for("c")] : 3
+        }
+        console.log(obj[Symbol.for("c")])
+
+        // 作业2：思考共享符号的源码如何实现
+    </script>
+</body>
+</html>

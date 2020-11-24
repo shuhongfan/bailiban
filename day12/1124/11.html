@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1">按钮1:给按钮2去注册点击事件</button>
+    <button id="btn2">按钮2:给按钮3去注册点击事件</button>
+    <button id="btn3">按钮3:点击以后会弹出helloworld</button>
+    <script>
+        // promise解决回调地狱
+        const btn1 = document.getElementById("btn1");
+        const btn2 = document.getElementById("btn2");
+        const btn3 = document.getElementById("btn3");
+
+        btn1.addEventListener("click",function(){
+            btn2.addEventListener("click",function(){
+                btn3.addEventListener("click",function(){
+                    alert("hello world")
+                })
+            })
+        })
+    </script>
+</body>
+</html>

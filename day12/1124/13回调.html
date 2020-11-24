@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 柯博文 目前心中有20位女神
+        // 有一天，柯博文决定向20位女神进行表白。群发
+        // 如果都拒绝了  如果有一个答应了   如果有多个答应了，应该是以第一个答应的为主，剩下的就要拒绝了
+        // 还要把所有女神给他的回复记录成日志进行分析
+        // 代码实现
+
+
+        function biaobai(nvshen,callback){
+            console.log(`柯博文正在向${nvshen}发表白微信`);
+            setTimeout(()=>{
+                if(Math.random() < 0.1){
+                    callback(true)    //resolve
+                }else{
+                    callback(false)    //reject
+                }
+            },Math.floor(Math.random() * 2000 + 1000))
+        }
+
+        let agreeGod = null;   //用来记录第一个同意的
+        const results = [];
+        for(let i = 1;i <= 20;i++){
+            biaobai(`女神${i}`,function(result){
+                results.push(result)
+                if(result){
+                    console.log(`女神${i}同意了`);
+                    if(agreeGod){
+                        console.log(`柯博文回复女神${i}：不好意思，刚刚是黄林拿我手机乱发的`);
+                    }else{
+                        agreeGod = `女神${i}`;
+                        console.log("柯博文经过自己的努力，终于找到了真爱")
+                    }
+                }else{
+                    console.log(`女神${i}拒绝了`)
+                }
+
+
+
+                if(results.length == 20){   //这段代码跟任何的代码都没有关联
+                    console.log(results)
+                }
+            })
+        }
+        console.log(results)
+    </script>
+</body>
+</html>

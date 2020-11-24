@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+DOM和BOM webAPI
+JS运行的环境成为宿主环境
+执行栈：call stack
+JavaScript中
+
+js引擎
+
+
+-->
+<script>
+    function a() {
+        console.log('a')
+        b()
+    }
+    function b() {
+        console.log('b')
+        c()
+    }
+    function c() {
+        console.log('c')
+    }
+
+    console.log('global')
+    a()
+</script>
+</body>
+</html>

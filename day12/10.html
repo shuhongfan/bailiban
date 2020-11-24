@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn01">按钮1：给按钮2去注册点击事件</button>
+<button id="btn02">按钮2：给按钮3去注册点击事件</button>
+<button id="btn03">按钮3：给按钮后弹出helloworld</button>
+<script>
+    const btn01=document.getElementById('btn01')
+    const btn02=document.getElementById('btn02')
+    const btn03=document.getElementById('btn03')
+    btn01.addEventListener('click',function () {
+        btn02.addEventListener('click',function () {
+            btn03.addEventListener('click',function () {
+                alert('hello world')
+            })
+        })
+    })
+</script>
+</body>
+</html>

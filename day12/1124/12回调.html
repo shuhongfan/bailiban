@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 柯博文 目前心中有三位女神
+        // 有一天，柯博文决定向三位女神进行表白。向第一个女神进行表白，如果拒绝了，向第二女神表白，
+        // 直到都拒绝或者有其中一个同意了，停止
+
+        // 代码实现
+        function biaobai(nvshen,callback){
+            console.log(`柯博文正在向${nvshen}发表白微信`);
+            setTimeout(()=>{
+                if(Math.random() < 0.1){
+                    callback(true)    //resolve
+                }else{
+                    callback(false)    //reject
+                }
+            },1000)
+        }
+        biaobai("女神1",function(result){
+            if(result){
+                console.log("女神1答应了，柯博文表示很开心")
+            }else{
+                console.log("女神1拒绝了，柯博文表示没有任何压力，继续向女神2发出表白微信")
+                biaobai("女神2",function(result){
+                    if(result){
+                        console.log("女神2答应了，柯博文很开心")
+                    }else{
+                        console.log("女神2十分感动，然后婉拒了柯博文，继续向女神3发出表白")
+                        biaobai("女神3",function(result){
+                            if(result){
+                                console.log("女神3答应了，柯博文燃起了信息")
+                            }else{
+                                console.log("柯博文表示生无可恋")
+                            }
+                        })
+                    }
+                })
+            }
+        })
+
+        // 以前的方式来说，异步只能写嵌套，嵌套多了就导致代码的可读性降低
+    </script>
+</body>
+</html>
