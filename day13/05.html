@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const pro=new Promise((resolve, reject) => {
+        // resolve(100)
+        // reject(10)
+
+        try {
+            throw new Error('hello world')
+        } catch (e) {
+
+        }
+        resolve(10)
+        reject(100)
+    })
+    pro.then(data=>{
+        console.log(data)
+    },err=>{
+        console.log(err)
+    })
+</script>
+</body>
+</html>

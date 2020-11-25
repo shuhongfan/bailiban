@@ -10,37 +10,28 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d44a367a-26da-4acf-b142-39811ca3507f" name="默认的" comment="day11">
-      <change afterPath="$PROJECT_DIR$/day12/01Symbol.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12/02symbol特征.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12/03共享符号.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12/04知名符号.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12/05事件循环.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12/06.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12/07.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12/08.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12/09.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12/10.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12/1124.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12/1124/01symbol.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12/1124/02symbol特征.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12/1124/03共享符号.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12/1124/04知名符号.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12/1124/05事件循环.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12/1124/06.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12/1124/07.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12/1124/08.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12/1124/09.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12/1124/10微队列.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12/1124/11.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12/1124/12回调.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12/1124/13回调.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12/1124/事件循环.ppt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12/11回调.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/思维导图/JS/JS.mmap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/思维导图/JS/JS.xmind" afterDir="false" />
+    <list default="true" id="d44a367a-26da-4acf-b142-39811ca3507f" name="默认的" comment="day12">
+      <change afterPath="$PROJECT_DIR$/ES6/03Symbol.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ES6/04Symbol.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13/01.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13/02.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13/03.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13/04.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13/05.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13/06.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13/07.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13/1125.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13/1125/01.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13/1125/02.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13/1125/03.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13/1125/04.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13/1125/05.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13/1125/06.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13/1125/07.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13/1125/08.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13/1125/09.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13/1125/异步处理模型.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day11/1123/01let和const.html" beforeDir="false" afterPath="$PROJECT_DIR$/day11/1123/01let和const.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +138,9 @@
       <workItem from="1606183245907" duration="114000" />
       <workItem from="1606183469361" duration="8309000" />
       <workItem from="1606199107851" duration="6263000" />
-      <workItem from="1606233740921" duration="606000" />
+      <workItem from="1606233740921" duration="1260000" />
+      <workItem from="1606237165003" duration="655000" />
+      <workItem from="1606267402929" duration="17391000" />
     </task>
     <task id="LOCAL-00001" summary="day01">
       <created>1604936634167</created>
@@ -233,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606121441963</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="day12">
+      <created>1606234537090</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1606234537090</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,7 +263,8 @@
     <MESSAGE value="day09" />
     <MESSAGE value="day10" />
     <MESSAGE value="day11" />
-    <option name="LAST_COMMIT_MESSAGE" value="day11" />
+    <MESSAGE value="day12" />
+    <option name="LAST_COMMIT_MESSAGE" value="day12" />
   </component>
   <component name="WindowStateProjectService">
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1605533868320">
@@ -338,10 +339,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="424" y="50" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1605578194456" />
-    <state x="361" y="146" width="814" height="532" key="Vcs.Push.Dialog.v2" timestamp="1606121445959">
+    <state x="361" y="145" width="814" height="532" key="Vcs.Push.Dialog.v2" timestamp="1606237210545">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1605800954173" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1606237210545" />
     <state x="2281" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1605026374705" />
     <state x="361" y="146" width="814" height="532" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1606121445959" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1605856477799">

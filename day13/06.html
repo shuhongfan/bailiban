@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // promise其实没有删除回调 只是让回调变的可以控制
+    // const pro1=new Promise((resolve, reject) => {
+    //     resolve(1)
+    // })
+    // console.log(pro1) // 已决
+    //
+    // const pro2=pro1.then(result=>{
+    //     return result*=2
+    // })
+    // console.log(pro2) //未决
+
+    // const pro1=new Promise((resolve, reject) => {
+    //     resolve(1)
+    // })
+    // console.log(pro1)
+    // const pro2=pro1.then(result=>result*=2)
+    // console.log(pro2)
+    // pro2.then(result=>{
+    //     console.log(result*2)
+    // },err=>{
+    //     console.log(err*3)
+    // })
+
+    // const pro1=new Promise((resolve, reject) => {
+    //     throw(1)
+    // })
+    // const pro2=pro1.then(result=>result*=2,err=>err*3)
+    // pro2.then(result=>{
+    //     console.log(result*2)
+    // },err=>{
+    //     console.log(result*3)
+    // })
+
+    // const pro1=new Promise((resolve, reject) => {
+    //     throw(1)
+    // })
+    // const pro2=pro1.then(result=>result*=2,err=>{
+    //     throw err * 3
+    // })
+    // pro2.then(result=>{
+    //     console.log(result)
+    //     console.log(result*2)
+    // },err=>{
+    //     console.log(err)
+    //     console.log(err*3)
+    // })
+
+    const pro1=new Promise((resolve, reject) => {
+        resolve(1)
+    })
+    const  pro2=new Promise((resolve, reject) => {
+        resolve(2)
+    })
+    const pro3=pro1.then(result=>{
+        return pro2 //如果返回的是一个promise对象，直接得到这个promise结果
+    })
+    pro3.then(result=>{
+        console.log(result)
+    })
+
+</script>
+</body>
+</html>

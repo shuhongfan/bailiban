@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function biaobai(nvshen) {
+        return new Promise(resolve => {
+            console.log('hello world',nvshen)
+            setTimeout(()=>{
+                if (Math.random()<0.1){
+                    resolve(true)
+                } else {
+                    resolve(false)
+                }
+            },4000)
+        })
+    }
+    const  pro=biaobai('翠花')
+    console.log(pro)
+
+    pro.then(result=>{
+        console.log(result)
+    })
+</script>
+</body>
+</html>

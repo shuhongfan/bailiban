@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mySymbol=Symbol()
+    let a={}
+    a[mySymbol]='Hello'
+
+    console.log(a)
+    console.log(a[mySymbol])
+
+    let b={
+        [mySymbol]:'Hello'
+    }
+    console.log(b)
+
+    let s=Symbol()
+    let obj={
+        [s](arg){
+            console.log(arg)
+        }
+    }
+    obj[s](123)
+
+
+    const COLOR_RED=Symbol(1)
+    const COLOR_GREEN=Symbol(2)
+    function getComplement(color) {
+        switch (color) {
+            case COLOR_RED:
+                return COLOR_GREEN
+            case  COLOR_GREEN:
+                return COLOR_RED
+            default:
+                throw new Error('undefined color')
+        }
+    }
+    console.log(getComplement(COLOR_RED))
+
+    function getArea(shape,options) {
+        let area=0
+        switch (shape) {
+            case "Triangle":
+                area=.5*options.width*options.height
+                break
+        }
+        return area
+    }
+    console.log(getArea('Triangle',{width: 100, height:100}))
+
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        异步处理通用模型
+
+        ES组织想出一套可以解决异步的所有场景
+
+        ES6高级浏览器才能支持，以前的写法依然照旧，我们扩展一套全新的API，这个API让异步处理的代码更加简洁
+
+        异步模型，API都是次要的，重点在于去理解异步的模型
+
+        任何的事情都是从未决阶段到已决阶段，未决阶段中有能力控制什么时候到已决阶段
+
+        在有了阶段的基础之上，在阶段中添加状态
+        pending、resolved、rejected
+        pending 等待，挂起  处于未决阶段中的一种状态，目前还是不知道结果的
+        resolved 已经处理完成，成功的状态   处于已决阶段
+        rejected 已经处理完成，拒绝的状态   处于已决阶段
+
+        pending可以把数据推向任意的一种状态，在推向这个状态的过程中，里面可以传递数据
+
+        无论是在任何的阶段还是状态，都是不可逆的
+
+        resolved状态，这个处于正常状态的已决阶段，后续处理函数thenable
+        rejected状态，这个处于非正常状态的已决阶段，后续处理函数catchable
+
+        这个整套事件的过程就叫promise
+
+    </script>
+</body>
+</html>

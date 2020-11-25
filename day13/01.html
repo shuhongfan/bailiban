@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const pro = new Promise(((resolve, reject) => {
+        resolve(100)
+    }))
+    console.log(pro)
+
+    pro.then(()=>{
+        // 成功的回调 resolved
+    },()=>{
+        // 失败的回调 rejected
+    })
+
+    // 未决阶段的处理函数是同步的 会立即执行
+    // thenable和catchable是异步的 会加入任务队列等待执行栈清空以后执行，加入到微队列中等待
+    // then方法可以添加thenable函数，也可以添加catchable函数
+    // 未决阶段中，如果发生了错误，这个错误如果没有捕获，会直接将状态推向rejected，执行catchable函数
+    // 如果阶段已经到了已决阶段
+    // promise没有删除回调
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 6.***promise其实没有删除回调，只是让回调变的可以控制
+
+        // const pro1 = new Promise((resolve,reject) => {
+        //     resolve(1)
+        // })
+        // console.log(pro1);  //已决
+        // const pro2 = pro1.then(result => result *= 2)  //依旧是返回一个promise对象，这个回调完成以后就是一个成功的promise，这个promise的数据就是返回值
+        // console.log(pro2)    //未决，因为pro2是放在了异步函数中，等待执行完成以后就是resolved
+
+
+
+        // const pro1 = new Promise((resolve,reject) => {
+        //     resolve(1)
+        // })
+        // const pro2 = pro1.then(result => result *= 2) 
+        // pro2.then(result => {
+        //     console.log(result * 2)   //4
+        // },err => {
+        //     console.log(err * 3)
+        // })
+        
+
+
+
+        // const pro1 = new Promise((resolve,reject) => {
+        //     throw(1)
+        // })
+        // const pro2 = pro1.then(result => result *= 2,err => err * 3) 
+        // pro2.then(result => {
+        //     console.log(result * 2)   
+        // },err => {
+        //     console.log(err * 3)
+        // })
+
+
+
+        const pro1 = new Promise((resolve,reject) => {
+            throw(1)
+        })
+        const pro2 = pro1.then(result => result *= 2,err => {throw err * 3} ) 
+        pro2.then(result => {
+            console.log(result * 2)   
+        },err => {
+            console.log(err * 3)
+        })
+
+        //NaN   9    
+    </script>
+</body>
+</html>

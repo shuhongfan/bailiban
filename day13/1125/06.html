@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 3.then方法中可以添加thenable函数，也可以添加catchable函数
+
+
+        // const pro = new Promise((resolve,reject) => {
+        //     // resolve(100)
+        //     reject(10)
+        // })
+        // pro.then(data => {   //工作中用then的第一个回调写成功，第二个回调虽然表示错误，但是很少回去使用
+        //     console.log(data)
+        // })
+        // pro.catch(err =>{   //错误一般都是用catch处理
+        //     console.log(err)
+        // })
+
+
+        // 4.在未决阶段中，如果发生了错误，这个错误如果没有捕获，会直接将状态推向rejected，执行catchable函数
+        const pro = new Promise((resolve,reject) => {
+            // throw new Error("hello world");   //这个是没有捕获的错误，会直接将状态推向已决阶段的错误状态
+            try {
+                throw new Error("hello world")   //这个错误被捕获了，就没有办法推向到rejected状态
+            } catch (error) {
+                
+            }
+
+            resolve(10);   //错误被捕获了，此时的状态还是pending状态，resolve正常推向resolved状态
+            reject(100);   //这个是无效的
+        })
+        pro.then(data => {  
+            console.log(data)
+        })
+        pro.catch(err =>{   
+            console.log(err)
+        })
+    </script>
+</body>
+</html>

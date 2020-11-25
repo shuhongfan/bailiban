@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function biaobai(nvshen,callback) {
+        return new Promise(resolve => {
+            console.log('hello world',nvshen)
+            setTimeout(()=>{
+                if (Math.random()<0.1){
+                    resolve(true)
+                } else {
+                    resolve(false)
+                }
+            },1000)
+        })
+    }
+    biaobai('女神1')
+        .then(result=>{
+            if (result){
+                console.log('女神1同意了')
+                return undefined
+            } else {
+                return biaobai('女神2')
+            }
+        })
+        .then(result=>{
+            // if (result==undefined) return
+            result==undefined && result
+            if (result){
+                console.log('女神2同意了')
+                return undefined
+            } else {
+                return biaobai('女神3')
+            }
+        })
+        .then(result=>{
+            result==undefined && result
+            if (result){
+                console.log('女神3同意了')
+                return undefined
+            } else {
+                return biaobai('都被拒绝了')
+            }
+        })
+</script>
+</body>
+</html>

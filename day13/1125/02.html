@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const pro = new Promise((resolve,reject) => {   //虽然这是两个形参，但是尽量保证语义 第一个形参表示成功函数的引用,第二个形参就表示失败函数的引用
+            // 未决阶段的处理，pending状态的处理
+            // resolve(100)
+            // reject(100)
+        })
+        // console.log(pro)
+        pro.then((data)=>{
+            成功的回调（resolved）  thenable函数
+        },(err)=>{
+            失败的回调（rejected）  catchable函数
+        })
+        pro.catch((err)=>{    //工作中的写法
+            
+        })
+
+
+        注意点：
+        1.未决阶段的处理函数是同步的，会立即执行
+        2.thenable和catchable是异步的，会加入任务队列等待执行栈清空以后执行，加入到微队列中等待
+        3.then方法中可以添加thenable函数，也可以添加catchable函数，但是工作用一般是把catchable函数单独拎出来写
+        4.在未决阶段中，如果发生了错误，这个错误如果没有捕获，会直接将状态推向rejected，执行catchable函数
+        5.如果阶段已经到了已决阶段，无法对阶段和状态做任何的改变
+        6.***promise其实没有删除回调，只是让回调变的可以控制
+    </script>
+</body>
+</html>

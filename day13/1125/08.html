@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const pro1 = new Promise((resolve,reject) => {
+            resolve(1)
+        })
+
+        const pro2 = new Promise((resolve,reject) => {
+            resolve(2)
+        })
+
+        const pro3 = pro1.then(result => {
+            return pro2;  //如果是返回的一个promise对象，直接得到这个promise的结果
+        })
+
+        pro3.then(result => {
+            console.log(result)
+        })
+
+        // Promise的静态方法
+    </script>
+</body>
+</html>
