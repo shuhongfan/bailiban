@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="请输入uname" id="user">
+<ul id="msg"></ul>
+<script>
+    let user=document.getElementById('user')
+    let msg=document.getElementById('msg')
+    user.oninput=function(){
+        var xhr=new XMLHttpRequest()
+        xhr.onreadystatechange=function () {
+            if (xhr.readyState===4 && xhr.status === 200){
+                msg.innerHTML=''
+                if (xhr.response=='5'){
+                    msg.innerHTML='用户名没有注册'
+                } else if (xhr.response=='6'){
+                    msg.innerHTML='未知错误'
+                } else if(xhr.response=='404'){
+                    msg.innerHTML='参数错误'
+                } else {
+                    let obj=JSON.parse(xhr.response)
+                    for (let item in obj) {
+                        let li=document.createElement('li')
+                        li.innerHTML=item+'------'+obj[item]
+                        msg.appendChild(li)
+                    }
+                }
+            }
+        }
+        xhr.open('get','http://localhost:3000/index_getdata?uname='+user.value,true)
+        xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xhr.send()
+    }
+</script>
+</body>
+</html>

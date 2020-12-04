@@ -2,5 +2,12 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/day15/node-elm" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/day15/vue-admin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/day15/vue-admin-template" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/day15/vue-element-admin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/day15/vue-manage-system" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/day15/vue2-elm" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vue-element-admin" vcs="Git" />
   </component>
 </project>

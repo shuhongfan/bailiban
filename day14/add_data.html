@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>增加</h2>
+用户名：<input type="text" id="uname" disabled> <br>
+姓名：<input type="text" id="name"> <br>
+性别：<input type="text" id="sex"> <br>
+年龄：<input type="text" id="age"> <br>
+邮箱：<input type="text" id="mail"> <br>
+电话：<input type="text" id="phone"> <br>
+
+<button id="login">增加</button>
+<script>
+
+    function getParamByUrl(url) {
+        var theRequest = new Object();
+        var index = url.indexOf("?");
+        if (index != -1) {
+            var str = url.substr(index + 1);
+            strs = str.split("&");
+            for(var i = 0; i < strs.length; i ++) {
+                theRequest[strs[i].split("=")[0]]=(strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+    }
+    var params = getParamByUrl(location.href);
+    console.log(params)
+
+    var uname=document.getElementById('uname')
+    var name=document.getElementById('name')
+    var sex=document.getElementById('sex')
+    var age=document.getElementById('age')
+    var mail=document.getElementById('mail')
+    var phone=document.getElementById('phone')
+    var login=document.getElementById('login')
+    uname.value=params.uname
+
+    login.onclick=function () {
+        let person={
+            uname:uname.value,
+            name:name.value,
+            sex:sex.value,
+            age:age.value,
+            mail:mail.value,
+            phone:phone.value,
+        }
+        if (person.uname==null){
+            alert('提交参数错误')
+            return false
+        }
+
+        var xhr=new XMLHttpRequest()
+        xhr.onreadystatechange=function () {
+            if (xhr.readyState===4 && xhr.status === 200){
+                if (xhr.response=='2'){
+                    alert('用户名不符合规范')
+                } else if (xhr.response=='3'){
+                    alert('该用户没有注册')
+                } else if (xhr.response=='4'){
+                    alert('提交参数错误')
+                } else if (xhr.response=='5'){
+                    alert('姓名不符合规范')
+                } else if (xhr.response=='6'){
+                    alert('年龄不符合规范')
+                } else if (xhr.response=='7'){
+                    alert('邮箱不符合规范')
+                } else if (xhr.response=='8'){
+                    alert('手机号不符合规范')
+                } else if(xhr.response=='1'){
+                    alert('增加成功')
+                }
+            }
+        }
+        xhr.open('post','http://localhost:3000/add_data',true)
+        xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xhr.send("uname=" + person.uname +
+            "&name=" + person.name +
+            "&sex=" + person.sex +
+            "&age=" + person.age +
+            "&mail=" + person.mail +
+            "&phone=" + person.phone
+        )
+    }
+</script>
+</body>
+</html>

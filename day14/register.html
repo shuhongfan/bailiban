@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h2>注册</h2>
+用户名：<input type="text" id="user"> <span id="msg"></span> <br>
+密码：<input type="text" id="pwd"> <br>
+<button id="zhuce">注册</button>
+<script>
+  var user=document.getElementById('user')
+  var pwd=document.getElementById('pwd')
+  var zhuce=document.getElementById('zhuce')
+  var msg=document.getElementById('msg')
+
+  user.oninput=function(){
+    var xhr=new XMLHttpRequest()
+    xhr.onreadystatechange=function () {
+      if (xhr.readyState===4 && xhr.status === 200){
+        if (xhr.response=='0'){
+          msg.innerHTML='用户名已经存在'
+        } else if (xhr.response=='1'){
+          msg.innerHTML='用户名不存在，可以注册'
+        } else if(xhr.response=='3'){
+          msg.innerHTML='用户名不符合规范'
+        } else {
+          msg.innerHTML=''
+        }
+      }
+    }
+    xhr.open('get','http://localhost:3000/register_validation?uname='+user.value,true)
+    xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    xhr.send()
+  }
+  zhuce.onclick=function () {
+    let person={
+      uname:user.value,
+      upassword:pwd.value
+    }
+    console.log(person.uname,person.upassword)
+    if (person.uname==null || person.upassword==null){
+      return alert('提交参数错误')
+    }
+
+    var xhr=new XMLHttpRequest()
+    xhr.onreadystatechange=function () {
+      if (xhr.readyState===4 && xhr.status === 200){
+        if (xhr.response=='3'){
+          alert('用户名或密码不符合规范')
+        } else if (xhr.response=='4'){
+          alert('用户已被注册')
+        } else if(xhr.response=='1'){
+          alert('注册成功')
+        }
+      }
+    }
+    xhr.open('post','http://localhost:3000/register',true)
+    xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    xhr.send("uname=" + person.uname + "&upassword=" + person.upassword)
+  }
+</script>
+</body>
+</html>

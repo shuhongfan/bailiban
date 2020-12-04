@@ -145,6 +145,16 @@
     // a.push('Hello')
     // a.length=0
     // a=['dave']
+
+    tmp = 'abc'; // ReferenceError
+    console.log(tmp); // ReferenceError
+
+    let tmp; // TDZ结束
+    console.log(tmp); // undefined
+
+    tmp = 123;
+    console.log(tmp); // 123
+    
 </script>
 </body>
 </html>
