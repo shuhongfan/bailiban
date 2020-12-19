@@ -48,7 +48,7 @@ export default {
         cancelButtonText: '取消',
         type: 'warning'
       }).then(async () => {
-        localStorage.removeItem('token')
+        sessionStorage.removeItem('token')
         this.$message({
           type: 'success',
           message: '已退出登录'

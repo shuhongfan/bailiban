@@ -5,8 +5,11 @@ const sql = require('../conf/mysql.js');
 const crypto = require('crypto');
 var cookieParser = require('cookie-parser')
 app.use(cookieParser())
+// 使用jsonwebtoken
 var jwt = require('jsonwebtoken');
 var priavteKey = "ABCDEFGHTIJLASJDOQGG"
+// 使用 Mockjs
+var Mock = require('mockjs')
 
 // token生成、校验
 function create(username, mobile){
@@ -29,7 +32,7 @@ function vertify(token){
 // 拦截请求
 var auth = async (req, res, next) => {
 // 登录请求不需要拦截
-    if (req.path == '/user/login' || req.path == '/user/register') {
+    if (req.path == '/user/login' || req.path == '/user/register' || req.path == '/mock') {
         next();
         return;
     }
@@ -48,6 +51,49 @@ var auth = async (req, res, next) => {
     next()
 };
 app.use(auth)
+
+
+// 模拟用户数据
+app.post("/mock",(req,res)=>{
+    // 获取 mock.Random 对象
+    const Random = Mock.Random;
+    // 拓展mockjs
+    Mock.Random.extend({
+        phone: function () {
+            var phonePrefixs = ['132', '135', '189'] // 自己写前缀哈
+            return this.pick(phonePrefixs) + Mock.mock(/\d{8}/) //Number()
+        }
+    })
+    var data = Mock.mock({
+        data:{
+            "list|5":[  //生成|5个如下格式名字的数据
+                {
+                    "id|+1":1,  //数字从当前数开始后续依次加一
+                    "username": "@cname", //名字为随机中文名字
+                    "password": "@protocol",
+                    'mobile|1': ['@phone'],
+                    "gender|1":[1,2,3],  //性别是数组中的一个，随机的
+                    'email':"@email",  //随机邮箱
+                    "status|1":[1,2],
+                }
+            ]
+        }
+    })
+    // res.send(data)
+    for (var i = 0; i < 5; i++) {
+        const {username,password,mobile,gender,email,status} = data.data.list[i]
+        let md5 = crypto.createHash("md5");
+        let newPas = md5.update(password).digest("hex");
+        sql.query(`insert into user(username,password,mobile,gender,email,status) values('${username}','${newPas}','${mobile}','${gender}','${email}','${status}')`,function(err,result){
+            // console.log(err)
+            if(err){
+                res.send({code:500,msg:'模拟数据失败'+err});
+            } else {
+                res.send({code:200,msg:'模拟数据成功'});
+            }
+        });
+    }
+})
 
 // 用户登录
 app.post("/user/login",(req,res)=>{

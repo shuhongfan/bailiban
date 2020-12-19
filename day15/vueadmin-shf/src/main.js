@@ -29,7 +29,7 @@ Vue.prototype.axios = axios
 axios.interceptors.request.use(
   (config) => { // 所有的请求都添加上请求头
     Nprogress.start()
-    config.headers.token = localStorage.getItem('token') || ''
+    config.headers.token = sessionStorage.getItem('token') || ''
     console.log(config)
     return config
   },
@@ -50,7 +50,7 @@ axios.interceptors.response.use(
       return
     }
     if (response.config.url === '/user/login' && code === 200) { // 登录成功时，设置token
-      localStorage.setItem('token', response.data.token)
+      sessionStorage.setItem('token', response.data.token)
     }
     return response
   },
