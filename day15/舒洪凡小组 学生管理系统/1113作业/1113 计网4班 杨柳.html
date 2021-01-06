@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <style>
+        *{
+            margin: 0 auto;
+            padding: 0;
+        }
+        #container{
+            width: 800px;
+            height: 800px;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        #container>.clicks{
+            width: 100px;
+            height: 100px;
+            background:rgb(247, 95, 95);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .cont{
+            position: absolute;
+            background:rgb(141, 255, 227);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="clicks">
+            <p>click</p>
+        </div>
+        <div class='cont'></div>
+        <div class='cont'></div>
+        <div class='cont'></div>
+        <div class='cont'></div>
+        <div class='cont'></div>
+        <div class='cont'></div>
+        <div class='cont'></div>
+        <div class='cont'></div>
+    </div>
+    <script>
+        let cx = 400;
+        let cy = 400;
+        let r = 80;
+        let length = 8;
+        let da = 360/length;
+        let a0 = 30;
+        let h = da;
+        let w = da;
+        let timer;
+        let king = true;
+        for(let i=1;i<length+1;i++){
+            $('.cont')[i-1].style.left = cx + r*Math.cos((da*i)/180*Math.PI)-h/2+'px';
+            $('.cont')[i-1].style.top = cy + r*Math.sin((da*i)/180*Math.PI)-w/2+'px';
+            $('.cont')[i-1].style.height = h+'px';
+            $('.cont')[i-1].style.width = w+'px';
+            $('.cont').eq(i-1).attr('angle',da*i);
+            console.log(da*i);
+
+        }
+    //    var timerss = setInterval(()=>{
+    //         a0-=1;
+    //         for(let i=0;i<length;i++){
+    //             $('.cont').eq(i).attr('dindex',$('.cont').eq(i).attr('dindex')-3)
+    //             if($('.cont').eq(i).attr('dindex') ==0){
+    //                 $('.cont')[i].style.height = parseInt($('.cont')[i].style.height)-4/(i+1)+'px';
+    //                 $('.cont')[i].style.width =  parseInt($('.cont')[i].style.width)-4/(i+1)+'px';
+    //             }else{
+    //                 $('.cont')[i].style.height = parseInt($('.cont')[i].style.height)-4/(i+1)+'px';
+    //                 $('.cont')[i].style.width =  parseInt($('.cont')[i].style.width)-4/(i+1)+'px';
+    //         $('.cont')[i].style.left = cx + r*Math.cos((da*i+a0*(i+1))/180*Math.PI)-h/2+'px';
+    //         $('.cont')[i].style.top = cy + r*Math.sin((da*i+a0*(i+1))/180*Math.PI)-w/2+'px';
+    //     }
+    //     }
+        // if($('.cont').eq(6).attr('dindex') <=0) clearInterval(timerss)
+        // },20)
+
+        $('.clicks').click(()=>{
+            {
+            if(king){
+                var timerss = setInterval(() => {
+                    for(let i=1;i<length+1;i++){
+                        let daa = $('.cont').eq(i-1).attr('angle');
+                        $('.cont').eq(i-1).attr('angle',daa-i);
+                        if(parseFloat($('.cont')[i-1].style.height) <=1){
+                            $('.cont')[i-1].style.height = '0px';
+                            $('.cont')[i-1].style.width = '0px';
+                            continue;
+                        }
+                        $('.cont')[i-1].style.left = cx + r*Math.cos((daa)/180*Math.PI)-h/2+'px';
+                        $('.cont')[i-1].style.top = cy + r*Math.sin((daa)/180*Math.PI)-w/2+'px';
+                        $('.cont')[i-1].style.height = daa/i+'px';
+                        $('.cont')[i-1].style.width = daa/i +'px';
+                        // $('.cont')[i-1].style.height = parseInt($('.cont')[i-1].style.height)-i*0.1+'px';
+                        // $('.cont')[i-1].style.width =  parseInt($('.cont')[i-1].style.width)-i*0.1+'px';
+                        
+                    }
+                    if(parseInt($('.cont')[length-1].style.height) <=0){
+                            clearInterval(timerss);
+                            console.log(1);
+                            king = false;
+                        }
+                }, 10);
+                
+            }else{
+                var timersss = setInterval(() => {
+                    for(let i=1;i<length+1;i++){
+                        let daa = parseInt($('.cont').eq(i-1).attr('angle'));
+                        $('.cont').eq(i-1).attr('angle',daa+i);
+                        if(parseFloat($('.cont')[i-1].style.height) >=45){
+                            $('.cont')[i-1].style.height = '45px';
+                            $('.cont')[i-1].style.width = '45px';
+                            continue;
+                        }
+                        $('.cont')[i-1].style.left = cx + r*Math.cos((daa)/180*Math.PI)-h/2+'px';
+                        $('.cont')[i-1].style.top = cy + r*Math.sin((daa)/180*Math.PI)-w/2+'px';
+                        $('.cont')[i-1].style.height = daa/i+'px';
+                        $('.cont')[i-1].style.width = daa/i +'px';
+                        // $('.cont')[i-1].style.height = parseInt($('.cont')[i-1].style.height)-i*0.1+'px';
+                        // $('.cont')[i-1].style.width =  parseInt($('.cont')[i-1].style.width)-i*0.1+'px';
+                        
+                    }
+                    if(parseInt($('.cont')[length-1].style.height) >=45){
+                            clearInterval(timersss);
+                            console.log(2);
+                            king = true;
+                        }
+                }, 10);
+               
+            }
+        }
+        })
+       
+    </script>
+</body>
+</html>
